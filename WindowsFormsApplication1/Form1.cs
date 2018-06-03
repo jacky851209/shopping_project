@@ -56,9 +56,11 @@ namespace WindowsFormsApplication1
 
         private void login_Click(object sender, EventArgs e)
         {
+            
             mainform f = new mainform();
             f.Show(this);
-            
+            this.Visible = false;
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

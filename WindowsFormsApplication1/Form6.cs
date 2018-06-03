@@ -10,24 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form3 : Form
+    public partial class Form6 : Form
     {
-        public Form3()
+        public Form6()
         {
-            
-            this.ControlBox = false;
             InitializeComponent();
         }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void new_item_Click(object sender, EventArgs e)
+        private void accept_Click(object sender, EventArgs e)
         {
-            Form6 f6 = new Form6();
-            f6.Show();
+            this.Close();
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

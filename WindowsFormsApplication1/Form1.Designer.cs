@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.register = new System.Windows.Forms.Button();
@@ -36,22 +35,13 @@
             this.username = new System.Windows.Forms.Label();
             this.login = new System.Windows.Forms.Button();
             this.sign_in = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.login_icon3;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 128);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 300);
+            this.textBox2.Location = new System.Drawing.Point(151, 305);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(218, 22);
             this.textBox2.TabIndex = 14;
@@ -59,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 241);
+            this.textBox1.Location = new System.Drawing.Point(151, 246);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 22);
             this.textBox1.TabIndex = 13;
@@ -68,9 +58,13 @@
             // register
             // 
             this.register.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.register.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.register.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.register.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.register.Location = new System.Drawing.Point(219, 383);
+            this.register.Location = new System.Drawing.Point(228, 383);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(150, 38);
             this.register.TabIndex = 12;
@@ -82,7 +76,7 @@
             // 
             this.password.AutoSize = true;
             this.password.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.password.Location = new System.Drawing.Point(65, 302);
+            this.password.Location = new System.Drawing.Point(65, 307);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(80, 20);
             this.password.TabIndex = 11;
@@ -93,7 +87,7 @@
             // 
             this.username.AutoSize = true;
             this.username.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.username.Location = new System.Drawing.Point(65, 241);
+            this.username.Location = new System.Drawing.Point(65, 246);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(86, 20);
             this.username.TabIndex = 10;
@@ -103,6 +97,10 @@
             // login
             // 
             this.login.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.login.Location = new System.Drawing.Point(59, 383);
@@ -126,6 +124,16 @@
             this.sign_in.TabIndex = 8;
             this.sign_in.Text = "Sign In";
             this.sign_in.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.login_icon3;
+            this.pictureBox1.Location = new System.Drawing.Point(150, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 128);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 

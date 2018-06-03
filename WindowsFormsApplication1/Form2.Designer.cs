@@ -84,6 +84,10 @@
             // signup
             // 
             this.signup.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.signup.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.signup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.signup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signup.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.signup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.signup.Location = new System.Drawing.Point(220, 395);
@@ -113,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(11, 86);
+            this.label1.Location = new System.Drawing.Point(10, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(413, 20);
             this.label1.TabIndex = 22;
@@ -170,7 +174,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(293, 25);
+            this.label5.Location = new System.Drawing.Point(292, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 34);
             this.label5.TabIndex = 28;
