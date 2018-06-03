@@ -14,6 +14,8 @@ namespace WindowsFormsApplication1
     {
         public Form3()
         {
+            
+            this.ControlBox = false;
             InitializeComponent();
         }
 

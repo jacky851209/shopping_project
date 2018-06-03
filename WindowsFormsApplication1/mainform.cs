@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            OpenForm(this.f4);
             this.button1.Enabled = false;
             this.button2.Enabled = true;
             this.button3.Enabled = true;

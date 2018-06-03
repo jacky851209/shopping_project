@@ -42,7 +42,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(16, 156);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(612, 514);
             this.listBox1.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.new_item.BackColor = System.Drawing.Color.Silver;
             this.new_item.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.new_item.Location = new System.Drawing.Point(493, 106);
-            this.new_item.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.new_item.Margin = new System.Windows.Forms.Padding(4);
             this.new_item.Name = "new_item";
             this.new_item.Size = new System.Drawing.Size(136, 42);
             this.new_item.TabIndex = 12;
@@ -112,7 +112,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
