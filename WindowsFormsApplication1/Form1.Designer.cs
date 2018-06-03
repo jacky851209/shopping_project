@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.login_icon3;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(150, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 128);
             this.pictureBox1.TabIndex = 15;
@@ -51,29 +51,31 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 300);
+            this.textBox2.Location = new System.Drawing.Point(151, 300);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 22);
+            this.textBox2.Size = new System.Drawing.Size(218, 22);
             this.textBox2.TabIndex = 14;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 241);
+            this.textBox1.Location = new System.Drawing.Point(151, 241);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 22);
+            this.textBox1.Size = new System.Drawing.Size(218, 22);
             this.textBox1.TabIndex = 13;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // register
             // 
+            this.register.BackColor = System.Drawing.SystemColors.HotTrack;
             this.register.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.register.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.register.Location = new System.Drawing.Point(219, 383);
             this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(150, 34);
+            this.register.Size = new System.Drawing.Size(150, 38);
             this.register.TabIndex = 12;
             this.register.Text = "Register";
-            this.register.UseVisualStyleBackColor = true;
+            this.register.UseVisualStyleBackColor = false;
             this.register.Click += new System.EventHandler(this.register_Click);
             // 
             // password
@@ -84,7 +86,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(80, 20);
             this.password.TabIndex = 11;
-            this.password.Text = "password";
+            this.password.Text = "Password";
             this.password.Click += new System.EventHandler(this.password_Click);
             // 
             // username
@@ -93,20 +95,22 @@
             this.username.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.username.Location = new System.Drawing.Point(65, 241);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(84, 20);
+            this.username.Size = new System.Drawing.Size(86, 20);
             this.username.TabIndex = 10;
-            this.username.Text = "username";
+            this.username.Text = "Username";
             this.username.Click += new System.EventHandler(this.username_Click);
             // 
             // login
             // 
+            this.login.BackColor = System.Drawing.SystemColors.HotTrack;
             this.login.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.login.Location = new System.Drawing.Point(59, 383);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(150, 34);
+            this.login.Size = new System.Drawing.Size(150, 38);
             this.login.TabIndex = 9;
             this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = true;
+            this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // sign_in
@@ -116,7 +120,7 @@
             this.sign_in.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.sign_in.ForeColor = System.Drawing.SystemColors.GrayText;
             this.sign_in.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sign_in.Location = new System.Drawing.Point(158, 167);
+            this.sign_in.Location = new System.Drawing.Point(149, 167);
             this.sign_in.Name = "sign_in";
             this.sign_in.Size = new System.Drawing.Size(132, 44);
             this.sign_in.TabIndex = 8;

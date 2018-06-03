@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -96,6 +97,9 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainform.resx">
       <DependentUpon>mainform.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,13 +127,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="login-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="face_photo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="login-icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="back.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="line.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

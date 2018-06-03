@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         public mainform()
         {
             InitializeComponent();
+            button2_Click(null, null);
         }
 
 
@@ -26,7 +27,9 @@ namespace WindowsFormsApplication1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenForm(this.f4);
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            OpenForm(new Form4());
             this.button1.Enabled = false;
             this.button2.Enabled = true;
             this.button3.Enabled = true;
@@ -34,21 +37,22 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            OpenForm(this.f5);
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            OpenForm(new Form5());
             this.button1.Enabled = true;
             this.button2.Enabled = false;
             this.button3.Enabled = true;
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            OpenForm(new Form3());
 
-            OpenForm(this.f3);
             this.button1.Enabled = true;
             this.button2.Enabled = true;
             this.button3.Enabled = false;
         }
-
-
     }
 }

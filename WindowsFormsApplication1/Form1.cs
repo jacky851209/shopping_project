@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
         {
             mainform f = new mainform();
             f.Show(this);
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
