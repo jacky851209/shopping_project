@@ -17,21 +17,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void verifyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void idenityToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mainform_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void OpenForm(Form objFrm)
         {
             objFrm.MdiParent = this;
@@ -39,10 +24,5 @@ namespace WindowsFormsApplication1
             objFrm.WindowState = FormWindowState.Maximized;
         }
 
-
-
-        private void toolStripLabel1_Click(object sender, EventArgs e) => OpenForm(new Form3());
-
-        private void toolStripLabel3_Click(object sender, EventArgs e) => OpenForm(new Form3());
     }
 }
