@@ -7,6 +7,9 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        Form3 f3 = new Form3();
+        Form4 f4 = new Form4();
+        Form5 f5 = new Form5();
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -41,6 +44,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "當買家";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -50,6 +54,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "我的資料";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
