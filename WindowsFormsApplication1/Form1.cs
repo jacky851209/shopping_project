@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
 
         private void register_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();//產生Form2的物件，才可以使用它所提供的Method
+            Form2 f = new Form2();
             f.Show(this);
         }
 
@@ -55,6 +55,12 @@ namespace WindowsFormsApplication1
         }
 
         private void login_Click(object sender, EventArgs e)
+        {
+            mainform f = new mainform();
+            f.Show(this);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
