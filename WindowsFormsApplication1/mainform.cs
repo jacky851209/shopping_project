@@ -21,9 +21,15 @@ namespace WindowsFormsApplication1
 
         private void OpenForm(Form objFrm)
         {
+
             objFrm.MdiParent = this;
+            objFrm.Dock = DockStyle.Fill;
+            //frm.Size = this.ClientSize;
+            objFrm.ShowInTaskbar = false;
+            //frm.WindowState = FormWindowState.Maximized;
+
             objFrm.Show();
-            objFrm.WindowState = FormWindowState.Maximized;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {

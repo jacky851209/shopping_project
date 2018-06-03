@@ -100,6 +100,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.users);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
             this.Text = "Form5";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

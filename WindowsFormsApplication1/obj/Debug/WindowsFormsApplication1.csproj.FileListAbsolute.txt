@@ -33,7 +33,6 @@ D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsForms
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form4.resources
-C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form4.resources
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form6.resources

@@ -121,7 +121,7 @@
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
