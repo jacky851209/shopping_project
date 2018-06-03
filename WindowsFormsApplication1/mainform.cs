@@ -24,5 +24,9 @@ namespace WindowsFormsApplication1
             objFrm.WindowState = FormWindowState.Maximized;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        { 
+            OpenForm(new Form3());
+        }
     }
 }
