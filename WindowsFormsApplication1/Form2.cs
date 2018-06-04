@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         private void signup_Click(object sender, EventArgs e)
         {
             int allisok = 0;
-            if (username.Text=="")
+            if (username.Text == "")
             {
                 label6.Visible = true;
             }
@@ -31,9 +31,9 @@ namespace WindowsFormsApplication1
                 label6.Visible = false;
                 allisok += 1;
             }
-              
 
-            if (email.Text=="")
+
+            if (email.Text == "")
             {
                 label7.Visible = true;
             }
@@ -42,8 +42,8 @@ namespace WindowsFormsApplication1
                 label7.Visible = false;
                 allisok += 1;
             }
-              
-            if (password.Text=="")
+
+            if (password.Text == "")
             {
                 label8.Visible = true;
             }
@@ -64,16 +64,18 @@ namespace WindowsFormsApplication1
             if (allisok == 4)
             {
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                user.find_the_user(email.ToString());
-                user.InsertOne(username.ToString(), email.ToString(), password.ToString());
-                this.Close();
+                if (user.find_the_user(email.ToString()) == false)
+                {
+                    user.InsertOne(username.ToString(), email.ToString(), password.ToString());
+                    this.Close();
+                }
+                else
+                {
+                    label9.Visible = true;
+                }
             }
-           
-       
+
+
         }
-
-      
-
-
     }
 }

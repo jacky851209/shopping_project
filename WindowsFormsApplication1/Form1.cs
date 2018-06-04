@@ -31,15 +31,19 @@ namespace WindowsFormsApplication1
         {
             
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-            if (user.login_success(username.ToString(), password.ToString()))
+            if (user.login_success(username.ToString(), password.ToString()) == 0)
             {
                 mainform f = new mainform();
                 f.Show(this);
                 this.Visible = false;
 
             }
-            else {
+            else if (user.login_success(username.ToString(), password.ToString()) == 1) {
                 login_error1.Visible = true;
+                login_error2.Visible = false;
+            }
+            else {
+                login_error1.Visible = false;
                 login_error2.Visible = true;
             }
         }

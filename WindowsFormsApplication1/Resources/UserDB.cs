@@ -25,22 +25,63 @@ namespace WindowsFormsApplication1.Resources
             // 取得 MongoServer 物件
             _mongoServer = _mongoClient.GetServer();
             // 取得 MongoDatabase 物件
-            _mongoDatabase = _mongoServer.GetDatabase("test");
+            _mongoDatabase = _mongoServer.GetDatabase("shopping");
             // 取得 Collection
             _mongoCollection = _mongoDatabase.GetCollection<User>("User");
         }
         public void InsertOne(String name, String email, String password)
         {
-            var coll = _mongoDatabase.GetCollection<BsonDocument>("user");  //指定寫入給"user"此collection  
+            var coll = _mongoDatabase.GetCollection<User>("user");  //指定寫入給"user"此collection  
             coll.Insert(new BsonDocument { { "uname", name }, { "umail", email }, { "upass", password } });
-  
+
         }
-        public bool find_the_user(String email) {
-            return true;
-        }
-        public bool login_success(String username, String password)
+        public bool find_the_user(String email)
         {
-            return false;
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<User>("user");
+
+
+            var filter = Builders<User>.Filter.Eq(x => x.umail, email);
+            var results = collection.Find(filter).Count();
+
+            if (results > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public int login_success(String username, String password)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<User>("user");
+
+
+            var filter = Builders<User>.Filter.Eq(x => x.uname, username);
+            var results = collection.Find(filter).Count();
+
+            if (results > 0)
+            {
+                filter = Builders<User>.Filter.Eq(x => x.uname, username) & Builders<User>.Filter.Eq(x => x.upass, password);
+                results = collection.Find(filter).Count();
+                if (results > 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }
