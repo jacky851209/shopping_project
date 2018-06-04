@@ -13,7 +13,6 @@ namespace WindowsFormsApplication1.Resources
         public string uname { get; set; }
         public string upass { get; set; }
         public string umail { get; set; }
-        
 
     }
 }

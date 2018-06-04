@@ -31,11 +31,17 @@ namespace WindowsFormsApplication1
         {
             
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-       
-            mainform f = new mainform();
-            f.Show(this);
-            this.Visible = false;
+            if (user.login_success(username.ToString(), password.ToString()))
+            {
+                mainform f = new mainform();
+                f.Show(this);
+                this.Visible = false;
 
+            }
+            else {
+                login_error1.Visible = true;
+                login_error2.Visible = true;
+            }
         }
     }
 }

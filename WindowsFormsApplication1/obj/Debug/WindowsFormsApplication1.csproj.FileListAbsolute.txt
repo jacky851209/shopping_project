@@ -50,3 +50,16 @@ D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driv
 D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Core.xml
 D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Legacy.xml
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\DnsClient.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Bson.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Legacy.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\System.Buffers.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\DnsClient.xml
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Bson.xml
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.xml
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Legacy.xml
+C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

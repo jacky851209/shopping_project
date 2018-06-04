@@ -29,12 +29,18 @@ namespace WindowsFormsApplication1.Resources
             // 取得 Collection
             _mongoCollection = _mongoDatabase.GetCollection<User>("User");
         }
-        public void InsertOne(String name , String email,String password)
+        public void InsertOne(String name, String email, String password)
         {
             var coll = _mongoDatabase.GetCollection<BsonDocument>("user");  //指定寫入給"user"此collection  
-            coll.Insert(new BsonDocument { { "uname", name }, { "umail", email }, { "upass", password } });   
-
+            coll.Insert(new BsonDocument { { "uname", name }, { "umail", email }, { "upass", password } });
+  
         }
-
+        public bool find_the_user(String email) {
+            return true;
+        }
+        public bool login_success(String username, String password)
+        {
+            return false;
+        }
     }
 }

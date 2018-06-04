@@ -64,7 +64,8 @@ namespace WindowsFormsApplication1
             if (allisok == 4)
             {
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                user.InsertOne(username.ToString(),email.ToString(),password.ToString());
+                user.find_the_user(email.ToString());
+                user.InsertOne(username.ToString(), email.ToString(), password.ToString());
                 this.Close();
             }
            
