@@ -37,15 +37,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.howmuch = new System.Windows.Forms.NumericUpDown();
+            this.count = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.accept = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.howmuch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +88,7 @@
             this.item.Name = "item";
             this.item.Size = new System.Drawing.Size(338, 22);
             this.item.TabIndex = 15;
+            this.item.TextChanged += new System.EventHandler(this.item_TextChanged);
             // 
             // label2
             // 
@@ -117,6 +122,11 @@
             // 
             this.price.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.price.Location = new System.Drawing.Point(120, 200);
+            this.price.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(120, 25);
             this.price.TabIndex = 19;
@@ -131,13 +141,13 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "數量: ";
             // 
-            // howmuch
+            // count
             // 
-            this.howmuch.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.howmuch.Location = new System.Drawing.Point(120, 240);
-            this.howmuch.Name = "howmuch";
-            this.howmuch.Size = new System.Drawing.Size(120, 25);
-            this.howmuch.TabIndex = 21;
+            this.count.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.count.Location = new System.Drawing.Point(120, 240);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(120, 25);
+            this.count.TabIndex = 21;
             // 
             // label5
             // 
@@ -196,17 +206,69 @@
             this.cancel.UseVisualStyleBackColor = false;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(118, 111);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 12);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "X 此行不能為空白";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(118, 149);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 12);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "X 此行不能為空白";
+            this.label7.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(118, 188);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 12);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "X 此行不能為0";
+            this.label8.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(118, 228);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 12);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "X 此行不能為0";
+            this.label9.Visible = false;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(484, 611);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.accept);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.howmuch);
+            this.Controls.Add(this.count);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.price);
             this.Controls.Add(this.label3);
@@ -221,7 +283,7 @@
             this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.howmuch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,8 +291,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label users;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox item;
@@ -239,11 +299,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown price;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown howmuch;
+        private System.Windows.Forms.NumericUpDown count;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button accept;
         private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label users;
     }
 }

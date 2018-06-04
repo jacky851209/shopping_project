@@ -29,20 +29,27 @@ namespace WindowsFormsApplication1
 
         private void login_Click(object sender, EventArgs e)
         {
-            
+            /*
+            mainform f = new mainform();
+            f.email.Text = email.Text.ToString();
+            f.Show(this);
+            this.Visible = false;
+            */
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-            if (user.login_success(username.Text.ToString(), password.Text.ToString()) == 0)
+            if (user.login_success(email.Text.ToString(), password.Text.ToString()) == 0)
             {
                 mainform f = new mainform();
+                f.email.Text = email.Text.ToString();
                 f.Show(this);
                 this.Visible = false;
-
             }
-            else if (user.login_success(username.Text.ToString(), password.Text.ToString()) == 1) {
+            else if (user.login_success(email.Text.ToString(), password.Text.ToString()) == 1)
+            {
                 login_error1.Visible = true;
                 login_error2.Visible = false;
             }
-            else {
+            else
+            {
                 login_error1.Visible = false;
                 login_error2.Visible = true;
             }

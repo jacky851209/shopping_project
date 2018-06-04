@@ -135,9 +135,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label users;
         private System.Windows.Forms.Button new_item;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label users;
     }
 }

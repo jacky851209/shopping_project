@@ -14,10 +14,11 @@ namespace WindowsFormsApplication1
     {
         public Form3()
         {
-            
             this.ControlBox = false;
             InitializeComponent();
+
         }
+
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -27,6 +28,7 @@ namespace WindowsFormsApplication1
         private void new_item_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();
+            f6.users.Text = this.users.Text;
             f6.Show();
         }
     }

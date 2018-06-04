@@ -53,8 +53,24 @@ namespace WindowsFormsApplication1.Resources
             {
                 return false;
             }
-
         }
+        public async Task<String> get_user_name(String email)
+        {
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<User>("user");
+
+
+            var filter = Builders<User>.Filter.Eq(x => x.umail, email);
+            var list = await collection.Find(new BsonDocument()).ToListAsync();
+            foreach (User dox in list)
+            {
+                return dox.uname;
+            }
+            return "ERROR";
+        }
+
         public int login_success(String username, String password)
         {
             var client = new MongoClient("mongodb://localhost:27017");
@@ -64,6 +80,7 @@ namespace WindowsFormsApplication1.Resources
 
             var filter = Builders<User>.Filter.Eq(x => x.uname, username);
             var results = collection.Find(filter).Count();
+
 
             if (results > 0)
             {
@@ -83,5 +100,14 @@ namespace WindowsFormsApplication1.Resources
                 return 1;
             }
         }
+
+        public void add_pro(String item, String info, String owner, int price, int count)
+        {
+            var coll = _mongoDatabase.GetCollection<Product>("product");  //指定寫入給"user"此collection  
+            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
+        }
+
+
+
     }
 }

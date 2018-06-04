@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.password = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.register = new System.Windows.Forms.Button();
             this.password1 = new System.Windows.Forms.Label();
             this.username1 = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.password.Size = new System.Drawing.Size(218, 22);
             this.password.TabIndex = 14;
             // 
-            // username
+            // email
             // 
-            this.username.Location = new System.Drawing.Point(151, 246);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(218, 22);
-            this.username.TabIndex = 13;
+            this.email.Location = new System.Drawing.Point(151, 246);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(218, 22);
+            this.email.TabIndex = 13;
             // 
             // register
             // 
@@ -88,9 +88,9 @@
             this.username1.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.username1.Location = new System.Drawing.Point(65, 246);
             this.username1.Name = "username1";
-            this.username1.Size = new System.Drawing.Size(86, 20);
+            this.username1.Size = new System.Drawing.Size(57, 20);
             this.username1.TabIndex = 10;
-            this.username1.Text = "Username";
+            this.username1.Text = "E-mail";
             // 
             // login
             // 
@@ -166,7 +166,7 @@
             this.Controls.Add(this.login_error1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.register);
             this.Controls.Add(this.password1);
             this.Controls.Add(this.username1);
@@ -185,7 +185,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Button register;
         private System.Windows.Forms.Label password1;
         private System.Windows.Forms.Label username1;

@@ -15,7 +15,9 @@ namespace WindowsFormsApplication1
         public mainform()
         {
             InitializeComponent();
-            button2_Click(null, null);
+            WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+            email.Text = user.get_user_name(email.Text.ToString()).ToString();
+            button1_Click(null, null);
         }
 
 
@@ -35,7 +37,9 @@ namespace WindowsFormsApplication1
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
+
             OpenForm(new Form4());
+
             this.button1.Enabled = false;
             this.button2.Enabled = true;
             this.button3.Enabled = true;
@@ -45,7 +49,11 @@ namespace WindowsFormsApplication1
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-            OpenForm(new Form5());
+
+            Form5 f5 = new Form5();
+            f5.users.Text = email.Text;
+            OpenForm(f5);
+
             this.button1.Enabled = true;
             this.button2.Enabled = false;
             this.button3.Enabled = true;
@@ -54,11 +62,19 @@ namespace WindowsFormsApplication1
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-            OpenForm(new Form3());
+
+            Form3 f3 = new Form3();
+            f3.users.Text = email.Text;
+            OpenForm(f3);
 
             this.button1.Enabled = true;
             this.button2.Enabled = true;
             this.button3.Enabled = false;
+        }
+
+        private void email_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

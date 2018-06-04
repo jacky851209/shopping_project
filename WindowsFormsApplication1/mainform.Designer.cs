@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.email = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -75,15 +76,29 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // email
+            // 
+            this.email.AutoSize = true;
+            this.email.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.email.Location = new System.Drawing.Point(10, 9);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(155, 21);
+            this.email.TabIndex = 5;
+            this.email.Text = "dont delete me plz";
+            this.email.Visible = false;
+            this.email.Click += new System.EventHandler(this.email_Click);
+            // 
             // mainform
             // 
             this.ClientSize = new System.Drawing.Size(484, 611);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.IsMdiContainer = true;
             this.Name = "mainform";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,5 +108,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Label email;
     }
 }
