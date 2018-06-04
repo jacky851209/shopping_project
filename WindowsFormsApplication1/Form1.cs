@@ -20,26 +20,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void register_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
@@ -47,27 +27,14 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void password_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void username_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void login_Click(object sender, EventArgs e)
         {
             
+            WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+       
             mainform f = new mainform();
             f.Show(this);
             this.Visible = false;
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
     }

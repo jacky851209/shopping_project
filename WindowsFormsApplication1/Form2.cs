@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace WindowsFormsApplication1
 {
@@ -62,15 +64,15 @@ namespace WindowsFormsApplication1
             if (allisok == 4)
             {
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                user.InsertOne();
+                user.InsertOne(username.ToString(),email.ToString(),password.ToString());
                 this.Close();
             }
            
        
         }
 
-        
+      
 
-        
+
     }
 }
