@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
                 if (user.find_the_user(email.ToString()) == false)
                 {
-                    user.InsertOne(username.ToString(), email.ToString(), password.ToString());
+                    user.InsertOne(username.Text.ToString(), email.Text.ToString(), password.Text.ToString());
                     this.Close();
                 }
                 else
