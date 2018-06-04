@@ -61,16 +61,15 @@ namespace WindowsFormsApplication1
             }
             if (allisok == 4)
             {
+                WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+                user.InsertOne();
                 this.Close();
             }
            
        
         }
 
-        private void confirmpassword_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         
     }

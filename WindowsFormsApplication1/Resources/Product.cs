@@ -8,12 +8,11 @@ using MongoDB.Bson;
 
 namespace WindowsFormsApplication1.Resources
 {
-    public class User
+    class Product
     {
-        public string uname { get; set; }
-        public string upass { get; set; }
-        public string umail { get; set; }
-        
-
+        public string ProductName { get; set; }
+        public string Owner { get; set; }
+        public decimal Price { get; set; }
+        public decimal Count { get; set; }
     }
 }

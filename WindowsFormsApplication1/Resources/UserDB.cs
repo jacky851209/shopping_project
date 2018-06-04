@@ -28,6 +28,11 @@ namespace WindowsFormsApplication1.Resources
             // 取得 Collection
             _mongoCollection = _mongoDatabase.GetCollection<User>("User");
         }
-       
+        public void InsertOne()
+        {
+            var coll = _mongoDatabase.GetCollection<BsonDocument>("user");  //指定寫入給"user"此collection  
+            coll.Insert(new BsonDocument { { "uname", "k" }, { "umail", "K@gmail.com" }, { "upass", "k" } });   //新增一筆document，屬性name之值 = "cabintest" 
+
+        }
     }
 }

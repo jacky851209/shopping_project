@@ -139,7 +139,6 @@
             this.confirmpassword.PasswordChar = '*';
             this.confirmpassword.Size = new System.Drawing.Size(412, 25);
             this.confirmpassword.TabIndex = 24;
-            this.confirmpassword.TextChanged += new System.EventHandler(this.confirmpassword_TextChanged);
             // 
             // label2
             // 
