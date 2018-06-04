@@ -22,7 +22,6 @@ C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\Windo
 D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
 D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
@@ -36,3 +35,18 @@ D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsForms
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form4.resources
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
 C:\Users\JACKY\Desktop\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form6.resources
+D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
+D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form6.resources
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\DnsClient.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Bson.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Core.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\System.Buffers.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\DnsClient.xml
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Bson.xml
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.xml
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Core.xml
+D:\開放平台\shopping_project\WindowsFormsApplication1\bin\Debug\MongoDB.Driver.Legacy.xml
+D:\開放平台\shopping_project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
