@@ -106,11 +106,7 @@ namespace WindowsFormsApplication1.Resources
             }
         }
 
-        public void add_pro(String item, String info, String owner, int price, int count)
-        {
-            var coll = _mongoDatabase.GetCollection<Product>("product");  
-            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
-        }
+       
 
 
 

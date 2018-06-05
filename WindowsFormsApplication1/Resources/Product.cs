@@ -15,5 +15,6 @@ namespace WindowsFormsApplication1.Resources
         public string Ownername { get; set; }
         public int Price { get; set; }
         public int Count { get; set; }
+        
     }
 }
