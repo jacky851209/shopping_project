@@ -31,9 +31,10 @@
             this.users = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.update_pass = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.label1.Location = new System.Drawing.Point(61, 238);
+            this.label1.Location = new System.Drawing.Point(61, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 28);
             this.label1.TabIndex = 16;
@@ -65,7 +66,7 @@
             // 
             this.update_pass.BackColor = System.Drawing.Color.Cornsilk;
             this.update_pass.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.update_pass.Location = new System.Drawing.Point(66, 269);
+            this.update_pass.Location = new System.Drawing.Point(66, 272);
             this.update_pass.Name = "update_pass";
             this.update_pass.Size = new System.Drawing.Size(401, 31);
             this.update_pass.TabIndex = 18;
@@ -73,6 +74,16 @@
             this.update_pass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.update_pass.UseVisualStyleBackColor = false;
             this.update_pass.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(8, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(473, 29);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "______________________________________________";
             // 
             // pictureBox1
             // 
@@ -94,15 +105,15 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // email
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(8, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(473, 29);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "______________________________________________";
+            this.email.AutoSize = true;
+            this.email.Font = new System.Drawing.Font("微軟正黑體", 16F);
+            this.email.Location = new System.Drawing.Point(189, 241);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(180, 28);
+            this.email.TabIndex = 25;
+            this.email.Text = "abc@gmail.com";
             // 
             // Form5
             // 
@@ -110,6 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(484, 611);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.update_pass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -133,5 +145,6 @@
         private System.Windows.Forms.Button update_pass;
         public System.Windows.Forms.Label users;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label email;
     }
 }

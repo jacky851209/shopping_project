@@ -20,9 +20,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mainform m = new mainform();
             Form7 f7 = new Form7();
-            f7.email.Text = m.email.Text;
+            f7.email.Text = this.email.Text;
             f7.Show(); 
         }
     }

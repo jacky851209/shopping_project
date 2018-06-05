@@ -12,11 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class mainform : Form
     {
-        public mainform()
+        public mainform(String email)
         {
             InitializeComponent();
-            WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-            email.Text = user.get_user_name(email.Text.ToString()).ToString();
+            settext(email);
             button1_Click(null, null);
         }
 
@@ -33,6 +32,14 @@ namespace WindowsFormsApplication1
             objFrm.Show();
 
         }
+        private async void settext(String email) {
+ 
+            WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+            this.email.Text = email;
+            username.Text = await user.get_user_name(email);
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
@@ -51,7 +58,8 @@ namespace WindowsFormsApplication1
                 ActiveMdiChild.Close();
 
             Form5 f5 = new Form5();
-            f5.users.Text = email.Text;
+            f5.users.Text = username.Text;
+            f5.email.Text = email.Text;
             OpenForm(f5);
 
             this.button1.Enabled = true;
@@ -64,7 +72,7 @@ namespace WindowsFormsApplication1
                 ActiveMdiChild.Close();
 
             Form3 f3 = new Form3();
-            f3.users.Text = email.Text;
+            f3.users.Text = username.Text;
             OpenForm(f3);
 
             this.button1.Enabled = true;

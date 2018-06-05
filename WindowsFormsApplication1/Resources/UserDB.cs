@@ -57,16 +57,17 @@ namespace WindowsFormsApplication1.Resources
                 return false;
             }
         }
-        public async Task<String> get_user_name(String email)
+
+        public async Task<string> get_user_name(String email)
         {
 
             var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
-
             var filter = Builders<User>.Filter.Eq(x => x.umail, email);
-            var list = await collection.Find(new BsonDocument()).ToListAsync();
+            var list = await collection.Find(filter).ToListAsync();
+            
             foreach (User dox in list)
             {
                 return dox.uname;

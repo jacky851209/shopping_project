@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.email = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -82,14 +83,24 @@
             this.email.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.email.Location = new System.Drawing.Point(10, 9);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(201, 27);
+            this.email.Size = new System.Drawing.Size(155, 21);
             this.email.TabIndex = 5;
             this.email.Text = "dont delete me plz";
-            this.email.Visible = false;
+            // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.username.Location = new System.Drawing.Point(11, 43);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(155, 21);
+            this.username.TabIndex = 7;
+            this.username.Text = "dont delete me plz";
             // 
             // mainform
             // 
             this.ClientSize = new System.Drawing.Size(484, 611);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.email);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -108,5 +119,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.Label email;
+        public System.Windows.Forms.Label username;
     }
 }

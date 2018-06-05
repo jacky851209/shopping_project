@@ -10,6 +10,8 @@ namespace WindowsFormsApplication1.Resources
 {
     public class User
     {
+        [BsonId]
+        public ObjectId ID { get; set; }
         public string uname { get; set; }
         public string upass { get; set; }
         public string umail { get; set; }
