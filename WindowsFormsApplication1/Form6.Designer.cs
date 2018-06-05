@@ -69,7 +69,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.face_photo;
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 100);
             this.pictureBox1.TabIndex = 12;
@@ -89,7 +89,7 @@
             // item
             // 
             this.item.Location = new System.Drawing.Point(160, 156);
-            this.item.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.item.Margin = new System.Windows.Forms.Padding(4);
             this.item.Name = "item";
             this.item.Size = new System.Drawing.Size(449, 25);
             this.item.TabIndex = 15;
@@ -108,7 +108,7 @@
             // iteminfo
             // 
             this.iteminfo.Location = new System.Drawing.Point(160, 204);
-            this.iteminfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iteminfo.Margin = new System.Windows.Forms.Padding(4);
             this.iteminfo.Name = "iteminfo";
             this.iteminfo.Size = new System.Drawing.Size(449, 25);
             this.iteminfo.TabIndex = 17;
@@ -128,7 +128,7 @@
             // 
             this.price.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.price.Location = new System.Drawing.Point(160, 250);
-            this.price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.price.Margin = new System.Windows.Forms.Padding(4);
             this.price.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -153,7 +153,7 @@
             // 
             this.count.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.count.Location = new System.Drawing.Point(160, 300);
-            this.count.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.count.Margin = new System.Windows.Forms.Padding(4);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(160, 29);
             this.count.TabIndex = 21;
@@ -173,7 +173,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.Location = new System.Drawing.Point(23, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 41);
             this.button1.TabIndex = 23;
@@ -185,7 +185,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Location = new System.Drawing.Point(23, 400);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(588, 242);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -199,7 +199,7 @@
             this.accept.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.accept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.accept.Location = new System.Drawing.Point(344, 670);
-            this.accept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accept.Margin = new System.Windows.Forms.Padding(4);
             this.accept.Name = "accept";
             this.accept.Size = new System.Drawing.Size(200, 48);
             this.accept.TabIndex = 26;
@@ -214,7 +214,7 @@
             this.cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cancel.Location = new System.Drawing.Point(119, 670);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(200, 48);
             this.cancel.TabIndex = 25;
@@ -295,7 +295,7 @@
             this.Controls.Add(this.users);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form6";
             this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

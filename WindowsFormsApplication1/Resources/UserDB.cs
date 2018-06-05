@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1.Resources
         private MongoServer _mongoServer;
         private MongoDatabase _mongoDatabase;
         private MongoCollection<User> _mongoCollection;
+        private MongoCollection<Product> _mongoCollection1;
 
         public UserDB()
         {
@@ -28,6 +29,8 @@ namespace WindowsFormsApplication1.Resources
             _mongoDatabase = _mongoServer.GetDatabase("shopping");
             // 取得 Collection
             _mongoCollection = _mongoDatabase.GetCollection<User>("User");
+
+            _mongoCollection1 = _mongoDatabase.GetCollection<Product>("Product");
         }
         public void InsertOne(String name, String email, String password)
         {
@@ -105,8 +108,8 @@ namespace WindowsFormsApplication1.Resources
 
         public void add_pro(String item, String info, String owner, int price, int count)
         {
-            var coll = _mongoDatabase.GetCollection<Product>("product");  //指定寫入給"user"此collection  
-            coll.Insert(new BsonDocument { { "ProductName", "1" }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
+            var coll = _mongoDatabase.GetCollection<Product>("product");  
+            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
         }
 
 

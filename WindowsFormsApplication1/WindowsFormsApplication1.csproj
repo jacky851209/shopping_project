@@ -114,6 +114,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Product.cs" />
+    <Compile Include="Resources\ProductDB.cs" />
     <Compile Include="Resources\User.cs" />
     <Compile Include="Resources\UserDB.cs" />
     <EmbeddedResource Include="Form1.resx">

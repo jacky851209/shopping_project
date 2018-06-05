@@ -70,6 +70,8 @@ namespace WindowsFormsApplication1
 
             if (allisok == 4)
             {
+                WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+                product.add_pro(item.Text.ToString(), iteminfo.Text.ToString(),users.Text.ToString(), Convert.ToInt32(price.Value), Convert.ToInt32(count.Value));
                 this.Close();
             }
         }
