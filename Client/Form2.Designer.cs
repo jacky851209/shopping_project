@@ -50,7 +50,7 @@
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(60, 265);
+            this.password.Location = new System.Drawing.Point(60, 267);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(310, 22);
@@ -58,7 +58,7 @@
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(60, 210);
+            this.email.Location = new System.Drawing.Point(60, 212);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(310, 22);
             this.email.TabIndex = 20;
@@ -67,7 +67,7 @@
             // 
             this.password1.AutoSize = true;
             this.password1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.password1.Location = new System.Drawing.Point(60, 240);
+            this.password1.Location = new System.Drawing.Point(60, 242);
             this.password1.Name = "password1";
             this.password1.Size = new System.Drawing.Size(80, 20);
             this.password1.TabIndex = 18;
@@ -77,7 +77,7 @@
             // 
             this.email1.AutoSize = true;
             this.email1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.email1.Location = new System.Drawing.Point(60, 185);
+            this.email1.Location = new System.Drawing.Point(60, 187);
             this.email1.Name = "email1";
             this.email1.Size = new System.Drawing.Size(57, 20);
             this.email1.TabIndex = 17;
@@ -92,7 +92,7 @@
             this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signup.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.signup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.signup.Location = new System.Drawing.Point(220, 395);
+            this.signup.Location = new System.Drawing.Point(220, 401);
             this.signup.Name = "signup";
             this.signup.Size = new System.Drawing.Size(150, 34);
             this.signup.TabIndex = 16;
@@ -127,7 +127,7 @@
             // 
             // confirmpassword
             // 
-            this.confirmpassword.Location = new System.Drawing.Point(60, 325);
+            this.confirmpassword.Location = new System.Drawing.Point(60, 327);
             this.confirmpassword.Name = "confirmpassword";
             this.confirmpassword.PasswordChar = '*';
             this.confirmpassword.Size = new System.Drawing.Size(310, 22);
@@ -137,7 +137,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(60, 300);
+            this.label2.Location = new System.Drawing.Point(60, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 20);
             this.label2.TabIndex = 23;
@@ -145,7 +145,7 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(60, 155);
+            this.username.Location = new System.Drawing.Point(60, 157);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(310, 22);
             this.username.TabIndex = 26;
@@ -154,7 +154,7 @@
             // 
             this.username1.AutoSize = true;
             this.username1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.username1.Location = new System.Drawing.Point(60, 130);
+            this.username1.Location = new System.Drawing.Point(60, 132);
             this.username1.Name = "username1";
             this.username1.Size = new System.Drawing.Size(86, 20);
             this.username1.TabIndex = 25;
@@ -184,7 +184,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(270, 310);
+            this.label3.Location = new System.Drawing.Point(270, 312);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 12);
@@ -196,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(270, 140);
+            this.label6.Location = new System.Drawing.Point(270, 142);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 12);
@@ -208,7 +208,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(270, 195);
+            this.label7.Location = new System.Drawing.Point(270, 197);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 12);
@@ -220,7 +220,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(270, 250);
+            this.label8.Location = new System.Drawing.Point(270, 252);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 12);
@@ -232,7 +232,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(270, 195);
+            this.label10.Location = new System.Drawing.Point(270, 197);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 12);

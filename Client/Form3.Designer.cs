@@ -52,7 +52,7 @@
             this.users.AutoSize = true;
             this.users.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold);
             this.users.ForeColor = System.Drawing.Color.Maroon;
-            this.users.Location = new System.Drawing.Point(93, 62);
+            this.users.Location = new System.Drawing.Point(93, 55);
             this.users.Name = "users";
             this.users.Size = new System.Drawing.Size(144, 35);
             this.users.TabIndex = 11;
@@ -61,10 +61,10 @@
             // 
             // new_item
             // 
-            this.new_item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.new_item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.new_item.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.new_item.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.new_item.Location = new System.Drawing.Point(370, 62);
+            this.new_item.Location = new System.Drawing.Point(369, 100);
             this.new_item.Name = "new_item";
             this.new_item.Size = new System.Drawing.Size(102, 34);
             this.new_item.TabIndex = 12;
@@ -77,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(12, 107);
+            this.label1.Location = new System.Drawing.Point(11, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 13;
@@ -96,7 +96,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(7, 73);
+            this.label5.Location = new System.Drawing.Point(7, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(473, 29);
             this.label5.TabIndex = 23;
@@ -107,7 +107,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.vScrollBar1);
             this.panel1.Location = new System.Drawing.Point(17, 141);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 385);
             this.panel1.TabIndex = 24;
@@ -142,5 +142,6 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label users;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label email;
     }
 }

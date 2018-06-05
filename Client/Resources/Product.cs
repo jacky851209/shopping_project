@@ -10,11 +10,13 @@ namespace WindowsFormsApplication1.Resources
 {
     class Product
     {
+        [BsonId]
+        public ObjectId ID { get; set; }
         public string ProductName { get; set; }
         public string Infomation { get; set; }
-        public string Ownername { get; set; }
+        public string OwnerEmail { get; set; }
         public int Price { get; set; }
         public int Count { get; set; }
-        
+        public string Product_image { get; set; }
     }
 }

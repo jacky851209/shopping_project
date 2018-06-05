@@ -45,6 +45,7 @@
             // 
             this.password.Location = new System.Drawing.Point(151, 305);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(218, 22);
             this.password.TabIndex = 14;
             // 
@@ -64,7 +65,7 @@
             this.register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.register.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.register.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.register.Location = new System.Drawing.Point(228, 383);
+            this.register.Location = new System.Drawing.Point(225, 383);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(150, 38);
             this.register.TabIndex = 12;
@@ -101,7 +102,7 @@
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.login.Location = new System.Drawing.Point(59, 383);
+            this.login.Location = new System.Drawing.Point(63, 383);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(150, 38);
             this.login.TabIndex = 9;
@@ -116,7 +117,7 @@
             this.sign_in.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.sign_in.ForeColor = System.Drawing.SystemColors.GrayText;
             this.sign_in.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sign_in.Location = new System.Drawing.Point(149, 167);
+            this.sign_in.Location = new System.Drawing.Point(160, 167);
             this.sign_in.Name = "sign_in";
             this.sign_in.Size = new System.Drawing.Size(132, 44);
             this.sign_in.TabIndex = 8;
@@ -126,7 +127,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.login_icon3;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(160, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 128);
             this.pictureBox1.TabIndex = 15;

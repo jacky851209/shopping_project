@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            Form5 f5 = new Form5();
+            Form5 f5 = new Form5(email.Text.ToString());
             f5.users.Text = username.Text;
             f5.email.Text = email.Text;
             OpenForm(f5);
@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            Form3 f3 = new Form3();
+            Form3 f3 = new Form3(email.Text.ToString());
             f3.users.Text = username.Text;
             OpenForm(f3);
 
@@ -79,5 +79,9 @@ namespace WindowsFormsApplication1
             this.button2.Enabled = true;
             this.button3.Enabled = false;
         }
+        void Form_Closed(object sender, FormClosedEventArgs e) {
+            this.Close();//or Close();
+        }
+
     }
 }

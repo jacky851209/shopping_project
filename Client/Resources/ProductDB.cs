@@ -30,10 +30,48 @@ namespace WindowsFormsApplication1.Resources
             // 取得 Collection
             _mongoCollection1 = _mongoDatabase.GetCollection<Product>("product");
         }
-        public void add_pro(String item, String info, String ownername, int price, int count)
+        public void add_pro(String item, String info, String email, int price, int count, String image_path)
         {
+            byte[] imageArray = System.IO.File.ReadAllBytes(image_path);
+            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
             var coll = _mongoDatabase.GetCollection<Product>("product");
-            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "Ownername", ownername }, { "Price", price }, { "Owner", count } });
+            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation } });
+        }
+
+        public bool find_item_is_exist(String item, String email)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+
+
+            var filter = Builders<Product>.Filter.Eq(x => x.ProductName, item) & Builders<Product>.Filter.Eq(x => x.OwnerEmail, email);
+            var results = collection.Find(filter).Count();
+
+            if (results > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<string> get_picture(String item, String email)
+        {
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+
+            var filter = Builders<Product>.Filter.Eq(x => x.ProductName, item) & Builders<Product>.Filter.Eq(x => x.OwnerEmail, email);
+            var list = await collection.Find(filter).ToListAsync();
+
+            foreach (Product dox in list)
+            {
+                return dox.Product_image;
+            }
+            return "ERROR";
         }
     }
 }

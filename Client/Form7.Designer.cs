@@ -45,13 +45,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(281, 237);
+            this.label8.Location = new System.Drawing.Point(278, 237);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 12);
@@ -63,7 +64,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(281, 182);
+            this.label7.Location = new System.Drawing.Point(278, 182);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 12);
@@ -75,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(281, 297);
+            this.label3.Location = new System.Drawing.Point(278, 297);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 12);
@@ -105,7 +106,7 @@
             // 
             // confirmp
             // 
-            this.confirmp.Location = new System.Drawing.Point(71, 312);
+            this.confirmp.Location = new System.Drawing.Point(68, 312);
             this.confirmp.Name = "confirmp";
             this.confirmp.PasswordChar = '*';
             this.confirmp.Size = new System.Drawing.Size(310, 22);
@@ -115,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(67, 291);
+            this.label2.Location = new System.Drawing.Point(64, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 42;
@@ -135,7 +136,7 @@
             // 
             // newp
             // 
-            this.newp.Location = new System.Drawing.Point(71, 252);
+            this.newp.Location = new System.Drawing.Point(68, 252);
             this.newp.Name = "newp";
             this.newp.PasswordChar = '*';
             this.newp.Size = new System.Drawing.Size(310, 22);
@@ -143,8 +144,9 @@
             // 
             // current
             // 
-            this.current.Location = new System.Drawing.Point(71, 197);
+            this.current.Location = new System.Drawing.Point(68, 197);
             this.current.Name = "current";
+            this.current.PasswordChar = '*';
             this.current.Size = new System.Drawing.Size(310, 22);
             this.current.TabIndex = 39;
             // 
@@ -152,7 +154,7 @@
             // 
             this.password1.AutoSize = true;
             this.password1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.password1.Location = new System.Drawing.Point(67, 229);
+            this.password1.Location = new System.Drawing.Point(64, 229);
             this.password1.Name = "password1";
             this.password1.Size = new System.Drawing.Size(122, 20);
             this.password1.TabIndex = 38;
@@ -162,7 +164,7 @@
             // 
             this.email1.AutoSize = true;
             this.email1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.email1.Location = new System.Drawing.Point(67, 174);
+            this.email1.Location = new System.Drawing.Point(64, 174);
             this.email1.Name = "email1";
             this.email1.Size = new System.Drawing.Size(150, 20);
             this.email1.TabIndex = 37;
@@ -177,7 +179,7 @@
             this.ok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ok.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.ok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ok.Location = new System.Drawing.Point(269, 355);
+            this.ok.Location = new System.Drawing.Point(276, 365);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(112, 34);
             this.ok.TabIndex = 36;
@@ -213,23 +215,35 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label9.Location = new System.Drawing.Point(67, 137);
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(64, 137);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 20);
+            this.label9.Size = new System.Drawing.Size(148, 24);
             this.label9.TabIndex = 54;
-            this.label9.Text = "E-mail address:";
+            this.label9.Text = "E-mail Address:";
             // 
             // email
             // 
             this.email.AutoSize = true;
-            this.email.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.email.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.email.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.email.Location = new System.Drawing.Point(196, 137);
+            this.email.Location = new System.Drawing.Point(208, 137);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(160, 20);
+            this.email.Size = new System.Drawing.Size(189, 24);
             this.email.TabIndex = 55;
             this.email.Text = "abc@gmail.com       ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(278, 182);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 12);
+            this.label10.TabIndex = 56;
+            this.label10.Text = "X 密碼不正確";
+            this.label10.Visible = false;
             // 
             // Form7
             // 
@@ -237,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(434, 411);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.email);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
@@ -256,6 +271,7 @@
             this.Controls.Add(this.label4);
             this.Name = "Form7";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +295,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label email;
+        private System.Windows.Forms.Label label10;
     }
 }

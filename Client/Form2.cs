@@ -35,10 +35,12 @@ namespace WindowsFormsApplication1
 
             if (email.Text == "")
             {
+                label10.Visible = false;
                 label7.Visible = true;
             }
             else
             {
+                label10.Visible = false;
                 label7.Visible = false;
                 allisok += 1;
             }
@@ -71,6 +73,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
+                    label7.Visible = false;
                     label10.Visible = true;
                 }
             }
