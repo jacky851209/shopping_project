@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
                 allisok += 1;
             }
 
-            if (confirmp.Text == "")
+            if (confirmp.Text == "" || confirmp.Text!=newp.Text)
             {
                 label3.Visible = true;
             }
