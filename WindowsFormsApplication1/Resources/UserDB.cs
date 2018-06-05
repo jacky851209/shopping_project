@@ -28,9 +28,9 @@ namespace WindowsFormsApplication1.Resources
             // 取得 MongoDatabase 物件
             _mongoDatabase = _mongoServer.GetDatabase("shopping");
             // 取得 Collection
-            _mongoCollection = _mongoDatabase.GetCollection<User>("User");
+            _mongoCollection = _mongoDatabase.GetCollection<User>("user");
 
-            _mongoCollection1 = _mongoDatabase.GetCollection<Product>("Product");
+            _mongoCollection1 = _mongoDatabase.GetCollection<Product>("product");
         }
         public void InsertOne(String name, String email, String password)
         {
@@ -73,8 +73,6 @@ namespace WindowsFormsApplication1.Resources
             }
             return "ERROR";
         }
-        
-      
 
         public int login_success(String username, String password)
         {
@@ -105,10 +103,6 @@ namespace WindowsFormsApplication1.Resources
                 return 1;
             }
         }
-
-       
-
-
 
     }
 }

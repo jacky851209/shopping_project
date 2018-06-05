@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1.Resources
             // 取得 MongoDatabase 物件
             _mongoDatabase = _mongoServer.GetDatabase("shopping");
             // 取得 Collection
-            _mongoCollection1 = _mongoDatabase.GetCollection<Product>("Product");
+            _mongoCollection1 = _mongoDatabase.GetCollection<Product>("product");
         }
         public void add_pro(String item, String info, String ownername, int price, int count)
         {
