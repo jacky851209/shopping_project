@@ -74,20 +74,20 @@ namespace WindowsFormsApplication1.Resources
             return "ERROR";
         }
 
-        public int login_success(String username, String password)
+        public int login_success(String email, String password)
         {
             var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
 
-            var filter = Builders<User>.Filter.Eq(x => x.uname, username);
+            var filter = Builders<User>.Filter.Eq(x => x.umail, email);
             var results = collection.Find(filter).Count();
 
 
             if (results > 0)
             {
-                filter = Builders<User>.Filter.Eq(x => x.uname, username) & Builders<User>.Filter.Eq(x => x.upass, password);
+                filter = Builders<User>.Filter.Eq(x => x.umail, email) & Builders<User>.Filter.Eq(x => x.upass, password);
                 results = collection.Find(filter).Count();
                 if (results > 0)
                 {

@@ -64,14 +64,14 @@ namespace WindowsFormsApplication1
             if (allisok == 4)
             {
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                if (user.find_the_user(email.ToString()) == false)
+                if (user.find_the_user(email.Text.ToString()) == false)
                 {
                     user.InsertOne(username.Text.ToString(), email.Text.ToString(), password.Text.ToString());
                     this.Close();
                 }
                 else
                 {
-                    label9.Visible = true;
+                    label10.Visible = true;
                 }
             }
 
