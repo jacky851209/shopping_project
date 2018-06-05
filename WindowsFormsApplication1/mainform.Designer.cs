@@ -83,9 +83,10 @@
             this.email.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.email.Location = new System.Drawing.Point(10, 9);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(155, 21);
+            this.email.Size = new System.Drawing.Size(201, 27);
             this.email.TabIndex = 5;
             this.email.Text = "dont delete me plz";
+            this.email.Visible = false;
             // 
             // username
             // 
@@ -93,9 +94,10 @@
             this.username.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.username.Location = new System.Drawing.Point(11, 43);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(155, 21);
+            this.username.Size = new System.Drawing.Size(201, 27);
             this.username.TabIndex = 7;
             this.username.Text = "dont delete me plz";
+            this.username.Visible = false;
             // 
             // mainform
             // 
