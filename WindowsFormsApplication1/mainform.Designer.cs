@@ -82,11 +82,10 @@
             this.email.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.email.Location = new System.Drawing.Point(10, 9);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(155, 21);
+            this.email.Size = new System.Drawing.Size(201, 27);
             this.email.TabIndex = 5;
             this.email.Text = "dont delete me plz";
             this.email.Visible = false;
-            this.email.Click += new System.EventHandler(this.email_Click);
             // 
             // mainform
             // 

@@ -13,15 +13,13 @@ namespace WindowsFormsApplication1
 {
     public partial class Form6 : Form
     {
+        int w, h;
+        Bitmap img1;
+
         public Form6()
         {
             InitializeComponent();
  
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void accept_Click(object sender, EventArgs e)
@@ -86,8 +84,27 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void item_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)  // 開啟影像檔
+            {
+                String input = openFileDialog1.FileName;
+                img1 = (Bitmap)Image.FromFile(input); // 產生一個Image物件
+                w = img1.Width;
+                h = img1.Height;
+
+                if ((this.ClientSize.Width < w) || (this.ClientSize.Height < h))
+                {
+                    Bitmap img2 = new Bitmap(img1, 588, 242);
+                    pictureBox2.Image = img2;
+                }
+                 else
+                {
+                    pictureBox2.Image = img1;
+                }
+               
+                pictureBox2.Refresh(); // 要求重畫
+            }
 
         }
     }

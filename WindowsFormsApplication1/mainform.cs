@@ -71,10 +71,5 @@ namespace WindowsFormsApplication1
             this.button2.Enabled = true;
             this.button3.Enabled = false;
         }
-
-        private void email_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

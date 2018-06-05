@@ -70,6 +70,8 @@ namespace WindowsFormsApplication1.Resources
             }
             return "ERROR";
         }
+        
+      
 
         public int login_success(String username, String password)
         {
@@ -104,7 +106,7 @@ namespace WindowsFormsApplication1.Resources
         public void add_pro(String item, String info, String owner, int price, int count)
         {
             var coll = _mongoDatabase.GetCollection<Product>("product");  //指定寫入給"user"此collection  
-            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
+            coll.Insert(new BsonDocument { { "ProductName", "1" }, { "Infomation", info }, { "Owner", owner }, { "Price", price }, { "Owner", count } });
         }
 
 

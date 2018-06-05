@@ -41,9 +41,10 @@
             // 
             this.users.AutoSize = true;
             this.users.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.users.Location = new System.Drawing.Point(44, 220);
+            this.users.Location = new System.Drawing.Point(59, 275);
+            this.users.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(112, 28);
+            this.users.Size = new System.Drawing.Size(139, 34);
             this.users.TabIndex = 13;
             this.users.Text = "username";
             // 
@@ -51,9 +52,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.label1.Location = new System.Drawing.Point(44, 262);
+            this.label1.Location = new System.Drawing.Point(59, 328);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 28);
+            this.label1.Size = new System.Drawing.Size(156, 34);
             this.label1.TabIndex = 16;
             this.label1.Text = "使用者帳號:";
             // 
@@ -61,9 +63,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Cornsilk;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.button1.Location = new System.Drawing.Point(40, 293);
+            this.button1.Location = new System.Drawing.Point(53, 366);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(401, 31);
+            this.button1.Size = new System.Drawing.Size(535, 39);
             this.button1.TabIndex = 18;
             this.button1.Text = "變更密碼                                             >";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,9 +77,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.face_photo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(194, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(259, 81);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 144);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -85,23 +89,25 @@
             this.pictureBox2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.back1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(500, 190);
+            this.pictureBox2.Size = new System.Drawing.Size(667, 238);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(484, 611);
+            this.ClientSize = new System.Drawing.Size(645, 764);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.users);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form5";
             this.Text = "Form5";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
