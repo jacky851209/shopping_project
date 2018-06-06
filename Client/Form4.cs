@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form4 : Form
     {
+        List<Button> btns = new List<Button>();
         public Form4()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace WindowsFormsApplication1
             if (count > 0)
             {
                 var product_list = await product.get_allproduct();
-                List<Button> btns=new List<Button>();
+               
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -105,8 +106,9 @@ namespace WindowsFormsApplication1
                     btn.Text = "購買!";
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
+                    btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
-
+                   
 
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
@@ -146,7 +148,8 @@ namespace WindowsFormsApplication1
 
         private void btns_Click(object sender, EventArgs e)
         {
-            Form8 f8 = new Form8();
+            int index = (int)(sender as Button).Tag;
+            Form8 f8 = new Form8(index);
             f8.Show();
         }
 

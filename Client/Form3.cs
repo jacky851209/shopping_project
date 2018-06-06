@@ -32,11 +32,6 @@ namespace WindowsFormsApplication1
             f6.users.Text = this.users.Text;
             f6.Show();
         }
-
-        private void users_Click(object sender, EventArgs e)
-        {
-
-        }
         private async void set_pic()
         {
 
