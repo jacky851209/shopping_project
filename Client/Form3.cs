@@ -130,6 +130,7 @@ namespace WindowsFormsApplication1
                     btn.Text = "修改!";
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
+                    btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
@@ -168,7 +169,8 @@ namespace WindowsFormsApplication1
         }
         private void btns_Click(object sender, EventArgs e)
         {
-            Form9 f9 = new Form9();
+            int index = (int)(sender as Button).Tag;
+            Form9 f9 = new Form9(index);
             f9.Show();
         }
     }

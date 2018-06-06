@@ -76,5 +76,10 @@ namespace WindowsFormsApplication1
 
             pictureBox1.Image = img2;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

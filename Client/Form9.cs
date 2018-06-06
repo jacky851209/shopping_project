@@ -12,9 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class Form9 : Form
     {
-        public Form9()
+        int digiger;
+        public Form9(int index)
         {
             InitializeComponent();
+            this.digiger = index;
         }
     }
 }
