@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             this.email.Text = mail;
-            set_pic();
+          //  set_pic();
         }
 
    
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
                 await user.add_picture(this.email.Text.ToString(), input);
                 DialogResult result = MessageBox.Show("大頭貼更新完成!", "成功", MessageBoxButtons.OK);
 
-                set_pic();
+               // set_pic();
             }
         }
 
@@ -59,11 +59,11 @@ namespace WindowsFormsApplication1
                 await user.add_picture(this.email.Text.ToString(), input);
                 DialogResult result = MessageBox.Show("大頭貼更新完成!", "成功", MessageBoxButtons.OK);
 
-                set_pic();
+              //  set_pic();
             }
         }
 
-        private async void set_pic() {
+       /* private async void set_pic() {
 
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
             String inputString = await user.get_picture(this.email.Text.ToString());
@@ -75,6 +75,6 @@ namespace WindowsFormsApplication1
             Bitmap img2 = new Bitmap(image, 120, 120);
 
             pictureBox1.Image = img2;
-        }
+        }*/
     }
 }

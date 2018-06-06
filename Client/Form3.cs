@@ -17,16 +17,12 @@ namespace WindowsFormsApplication1
         {
             this.ControlBox = false;
             InitializeComponent();
+            flowLayoutPanel1.VerticalScroll.Visible = true;
             this.mail = email;
-            set_pic();
+            //set_pic();
 
         }
 
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
 
         private void new_item_Click(object sender, EventArgs e)
         {
@@ -39,7 +35,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private async void set_pic()
+        /*private async void set_pic()
         {
 
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
@@ -52,6 +48,6 @@ namespace WindowsFormsApplication1
             Bitmap img2 = new Bitmap(image, 80, 80);
 
             pictureBox1.Image = img2;
-        }
+        }*/
     }
 }
