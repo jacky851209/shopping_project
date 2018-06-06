@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
             if (count > 0)
             {
                 var product_list = await product.get_product(this.mail.ToString());
-
+                List<Button> btns = new List<Button>();
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -132,9 +132,10 @@ namespace WindowsFormsApplication1
                     btn.BackColor = Color.GreenYellow;
                     btn.Width = 190;
                     btn.Height = 35;
-                    btn.Text = "購買!";
+                    btn.Text = "修改!";
                     btn.Location = new Point(5, 290);
-
+                    btns.Add(btn);
+                    btns[i].Click += new EventHandler(this.btns_Click);
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
                     set_pro_pic(picbox, product_list[i].Product_image);
@@ -169,6 +170,11 @@ namespace WindowsFormsApplication1
             Bitmap img2 = new Bitmap(image, 200, 200);
 
             p1.Image = img2;
+        }
+        private void btns_Click(object sender, EventArgs e)
+        {
+            Form9 f9 = new Form9();
+            f9.Show();
         }
     }
 }

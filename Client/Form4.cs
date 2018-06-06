@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             if (count > 0)
             {
                 var product_list = await product.get_allproduct();
-
+                List<Button> btns=new List<Button>();
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -104,6 +104,9 @@ namespace WindowsFormsApplication1
                     btn.Height = 35;
                     btn.Text = "購買!";
                     btn.Location = new Point(5, 290);
+                    btns.Add(btn);
+                    btns[i].Click += new EventHandler(this.btns_Click);
+
 
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
@@ -140,5 +143,13 @@ namespace WindowsFormsApplication1
 
             p1.Image = img2;
         }
+
+        private void btns_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.Show();
+        }
+
+        
     }
 }

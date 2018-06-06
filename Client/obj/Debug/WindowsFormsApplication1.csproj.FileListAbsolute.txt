@@ -136,7 +136,6 @@ D:\開放平台\shopping_project\Client\bin\Debug\MongoDB.Bson.xml
 D:\開放平台\shopping_project\Client\bin\Debug\MongoDB.Driver.xml
 D:\開放平台\shopping_project\Client\bin\Debug\MongoDB.Driver.Core.xml
 D:\開放平台\shopping_project\Client\bin\Debug\MongoDB.Driver.Legacy.xml
-D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form1.resources
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form2.resources
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form3.resources
@@ -150,3 +149,5 @@ D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.cspro
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.exe
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.pdb
+D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form8.resources
+D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
