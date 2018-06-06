@@ -13,15 +13,17 @@ namespace WindowsFormsApplication1
     public partial class Form9 : Form
     {
         int digiger;
+        Form3 f3;
         String image_path;
         String mail;
-        public Form9(String email, int index)
+        public Form9(String email, int index, Form3 form3)
         {
             InitializeComponent();
 
             this.digiger = index;
             this.mail = email;
             this.email.Text = mail;
+            f3 = form3;
             setvalue();
             openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
 
@@ -74,7 +76,7 @@ namespace WindowsFormsApplication1
             if (allisok == 1)
             {
                 await product.update_product(mail, pro_name1.Text.ToString(), set_info.ToString(), Convert.ToInt32(new_price.Value), Convert.ToInt32(new_qua.Value), image_path);
-
+                f3.RefreshForm();
                 this.Close();
             }
         }

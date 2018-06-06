@@ -13,10 +13,12 @@ namespace WindowsFormsApplication1
     public partial class Form8 : Form
     {
         int digiger;
-        public Form8(int index)
+        Form4 form;
+        public Form8(int index,Form4 form4)
         {
             InitializeComponent();
             this.digiger = index;
+            this.form = form4;
             set_product(digiger);
         }
 
@@ -57,9 +59,10 @@ namespace WindowsFormsApplication1
 
 
                 await product.buy_product(product_list[digiger].OwnerEmail, product_list[digiger].ProductName, buyone);
-                this.Close();
                 DialogResult result1 = MessageBox.Show("您可以在\"我的資料\"中的\"訂單查詢\"\n持續追蹤您的訂單資訊!", "購買成功", MessageBoxButtons.OK);
-                
+                form.RefreshForm();
+                this.Close();
+
             }
         }
     }

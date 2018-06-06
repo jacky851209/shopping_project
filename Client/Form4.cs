@@ -16,13 +16,12 @@ namespace WindowsFormsApplication1
         public Form4()
         {
             InitializeComponent();
-            flowLayoutPanel1.VerticalScroll.Visible = true;
-            flowLayoutPanel1.AutoScroll = true;
             set_product();
         }
 
         private async void set_product()
         {
+            flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
             var Pcount = await product.get_allproduct();
@@ -163,7 +162,7 @@ namespace WindowsFormsApplication1
             int index = (int)(sender as Button).Tag;
             if (Pcount[index].Count != 0)
             {
-                Form8 f8 = new Form8(index);
+                Form8 f8 = new Form8(index, this);
                 f8.Show();
             }
             
@@ -172,6 +171,11 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+        public void RefreshForm()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            this.set_product();
         }
     }
 }

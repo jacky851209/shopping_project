@@ -12,13 +12,12 @@ namespace WindowsFormsApplication1
 {
     public partial class Form3 : Form
     {
+   
         String mail;
         public Form3(String email)
         {
             this.ControlBox = false;
             InitializeComponent();
-            flowLayoutPanel1.VerticalScroll.Visible = true;
-            flowLayoutPanel1.AutoScroll = true;
             this.mail = email;
             set_pic();
             set_product();
@@ -28,7 +27,7 @@ namespace WindowsFormsApplication1
 
         private void new_item_Click(object sender, EventArgs e)
         {
-            Form6 f6 = new Form6(mail.ToString());
+            Form6 f6 = new Form6(mail.ToString(), this);
             f6.users.Text = this.users.Text;
             f6.Show();
 
@@ -50,6 +49,7 @@ namespace WindowsFormsApplication1
 
         private async void set_product()
         {
+            flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
             int count = product.sell_product(this.mail.ToString());
@@ -172,9 +172,13 @@ namespace WindowsFormsApplication1
         private void btns_Click(object sender, EventArgs e)
         {
             int index = (int)(sender as Button).Tag;
-            Form9 f9 = new Form9(this.mail, index);
+            Form9 f9 = new Form9(this.mail, index, this);
             f9.Show();
         }
-
+        public void RefreshForm()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            this.set_product();
+        }
     }
 }

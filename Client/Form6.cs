@@ -13,15 +13,17 @@ namespace WindowsFormsApplication1
 {
     public partial class Form6 : Form
     {
+        Form3 form3;
         int w, h;
         Bitmap img1;
         String email;
         String image_path;
 
-        public Form6(String email)
+        public Form6(String email, Form3 f3)
         {
             InitializeComponent();
             this.email = email;
+            form3 = f3;
             set_pic();
             openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
         }
@@ -94,6 +96,7 @@ namespace WindowsFormsApplication1
                     label15.Visible = false;
                     product.add_pro(item.Text.ToString(), iteminfo.Text.ToString(), email.ToString(), Convert.ToInt32(price.Value), Convert.ToInt32(count.Value), image_path);
                     DialogResult result = MessageBox.Show("商品上傳成功!", "完成", MessageBoxButtons.OK);
+                    form3.RefreshForm();
                     this.Close();
                 }
             }
