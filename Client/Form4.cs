@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             flowLayoutPanel1.VerticalScroll.Visible = true;
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void Form4_Load(object sender, EventArgs e)

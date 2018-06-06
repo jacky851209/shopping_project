@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
             this.ControlBox = false;
             InitializeComponent();
             flowLayoutPanel1.VerticalScroll.Visible = true;
+            flowLayoutPanel1.AutoScroll = true;
             this.mail = email;
             //set_pic();
 
