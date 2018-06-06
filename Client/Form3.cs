@@ -20,7 +20,8 @@ namespace WindowsFormsApplication1
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             this.mail = email;
-            //set_pic();
+            set_pic();
+            set_product();
 
         }
 
@@ -36,7 +37,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-        /*private async void set_pic()
+        private async void set_pic()
         {
 
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
@@ -49,6 +50,125 @@ namespace WindowsFormsApplication1
             Bitmap img2 = new Bitmap(image, 80, 80);
 
             pictureBox1.Image = img2;
-        }*/
+        }
+
+        private async void set_product() {
+            flowLayoutPanel1.AutoScroll = true;
+            WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+            int count = product.sell_product(this.mail.ToString());
+            if (count > 0)
+            {
+                var product_list = await product.get_product(this.mail.ToString());
+
+                for (int i = 0; i < count; i++)
+                {
+                    GroupBox gb = new GroupBox();
+                    gb.Width = 200;
+                    gb.Height = 335;
+                    gb.Margin = new Padding(10, 5, 10, 0);
+                    
+
+                    PictureBox picbox = new PictureBox();
+                    picbox.Width = 200;
+                    picbox.Height = 200;
+
+                    Label l1 = new Label();
+                    l1.Font = new Font("Arial", 12, FontStyle.Regular);
+                    l1.AutoSize = true;
+                    l1.Location = new Point(5, 205);
+                    l1.Visible = true;
+                    l1.Text = "商品名稱:";
+
+                    Label pro_name = new Label();
+                    pro_name.Font = new Font("Arial", 12, FontStyle.Regular);
+                    pro_name.AutoSize = true;
+                    pro_name.Location = new Point(80, 205);
+                    pro_name.Visible = true;
+                    pro_name.Text = product_list[i].ProductName;
+
+                    Label l2 = new Label();
+                    l2.Font = new Font("Arial", 12, FontStyle.Regular);
+                    l2.AutoSize = true;
+                    l2.Location = new Point(5, 225);
+                    l2.Visible = true;
+                    l2.Text = "商品資訊:";
+
+                    Label pro_info = new Label();
+                    pro_info.Font = new Font("Arial", 12, FontStyle.Regular);
+                    pro_info.AutoSize = true;
+                    pro_info.Location = new Point(80, 225);
+                    pro_info.Visible = true;
+                    pro_info.Text = product_list[i].Infomation;
+
+                    Label l3 = new Label();
+                    l3.Font = new Font("Arial", 12, FontStyle.Regular);
+                    l3.AutoSize = true;
+                    l3.Location = new Point(5, 245);
+                    l3.Visible = true;
+                    l3.Text = "商品價格:";
+
+                    Label pro_price = new Label();
+                    pro_price.Font = new Font("Arial", 12, FontStyle.Regular);
+                    pro_price.AutoSize = true;
+                    pro_price.Location = new Point(80, 245);
+                    pro_price.Visible = true;
+                    pro_price.Text ="$"+ Convert.ToString(product_list[i].Price);
+
+                    Label l4 = new Label();
+                    l4.Font = new Font("Arial", 12, FontStyle.Regular);
+                    l4.AutoSize = true;
+                    l4.Location = new Point(5, 265);
+                    l4.Visible = true;
+                    l4.Text = "剩餘數量:";
+
+                    Label pro_count = new Label();
+                    pro_count.Font = new Font("Arial", 12, FontStyle.Regular);
+                    pro_count.AutoSize = true;
+                    pro_count.Location = new Point(80, 265);
+                    pro_count.Visible = true;
+                    pro_count.Text = Convert.ToString(product_list[i].Count);
+
+                    Button btn = new Button();
+                    btn.BackColor = Color.GreenYellow;
+                    btn.Width = 190;
+                    btn.Height = 35;
+                    btn.Text = "購買!";
+                    btn.Location = new Point(5, 290);
+
+
+                    //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
+                    set_pro_pic(picbox, product_list[i].Product_image);
+                    picbox.Size = new System.Drawing.Size(200, 200);
+                    picbox.SizeMode = PictureBoxSizeMode.Zoom;
+                    
+
+                    gb.Controls.Add(picbox);
+                    gb.Controls.Add(l1);
+                    gb.Controls.Add (pro_name);
+                    gb.Controls.Add(l2);
+                    gb.Controls.Add(pro_info);
+                    gb.Controls.Add(l3);
+                    gb.Controls.Add(pro_price);
+                    gb.Controls.Add(l4);
+                    gb.Controls.Add(pro_count);
+                    gb.Controls.Add(btn);
+
+                    flowLayoutPanel1.Controls.Add(gb);
+
+                }
+            }
+        }
+
+        private void set_pro_pic(PictureBox p1, string inputString)
+        {
+
+            byte[] imageBytes = Convert.FromBase64String(inputString);
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
+
+            Image image = Image.FromStream(ms, true, true);
+            Bitmap img2 = new Bitmap(image, 200, 200);
+
+            p1.Image = img2;
+        }
     }
 }

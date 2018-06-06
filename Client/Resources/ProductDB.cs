@@ -57,6 +57,33 @@ namespace WindowsFormsApplication1.Resources
                 return false;
             }
         }
+
+        public int sell_product(String email)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+
+
+            var filter = Builders<Product>.Filter.Eq(x => x.OwnerEmail, email);
+            var results = collection.Find(filter).Count();
+
+            return (int)results;
+        }
+
+        public async Task<List<Product>> get_product(String email)
+        {
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+
+            var filter = Builders<Product>.Filter.Eq(x => x.OwnerEmail, email);
+            var list = await collection.Find(filter).ToListAsync();
+
+            return list;
+        }
+
         public async Task<string> get_picture(String item, String email)
         {
 
