@@ -100,10 +100,19 @@ namespace WindowsFormsApplication1
                     pro_count.Text = Convert.ToString(product_list[i].Count);
 
                     Button btn = new Button();
-                    btn.BackColor = Color.GreenYellow;
+
                     btn.Width = 190;
                     btn.Height = 35;
-                    btn.Text = "購買!";
+                    if (product_list[i].Count != 0)
+                    {
+                        btn.Text = "購買!";
+                        btn.BackColor = Color.GreenYellow;
+                    }
+                    else
+                    {
+                        btn.Text = "售完!   待補貨";
+                        btn.BackColor = Color.OrangeRed;
+                    }
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
                     btns[i].Tag = i;
@@ -146,11 +155,18 @@ namespace WindowsFormsApplication1
             p1.Image = img2;
         }
 
-        private void btns_Click(object sender, EventArgs e)
+        private async void btns_Click(object sender, EventArgs e)
         {
+            WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+            var Pcount = await product.get_allproduct();
+
             int index = (int)(sender as Button).Tag;
-            Form8 f8 = new Form8(index);
-            f8.Show();
+            if (Pcount[index].Count != 0)
+            {
+                Form8 f8 = new Form8(index);
+                f8.Show();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

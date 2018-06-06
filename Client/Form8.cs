@@ -26,10 +26,11 @@ namespace WindowsFormsApplication1
             var product_list = await product.get_allproduct();
             pname.Text = product_list[index].ProductName;
             pinto.Text = product_list[index].Infomation;
-            pcount.Text = Convert.ToString(product_list[index].Count);
+            pcount.Text = Convert.ToString(product_list[index].Count) + "件";
             pprice.Text = Convert.ToString(product_list[index].Price);
             set_pro_pic(pictureBox1, product_list[index].Product_image);
-     
+            buy_howmuch.Maximum = product_list[index].Count;
+
         }
 
         private void set_pro_pic(PictureBox p1, string inputString)
@@ -44,13 +45,20 @@ namespace WindowsFormsApplication1
             p1.Image = image;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("是否確定要購買此商品", "注意", MessageBoxButtons.YesNo);
+            WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+            var product_list = await product.get_allproduct();
+            int buyone = product_list[digiger].Count - (int)buy_howmuch.Value;
+            DialogResult result = MessageBox.Show("總金額為: "+ (int)buy_howmuch.Value * product_list[digiger].Price + "元\n是否確定要購買此商品", "注意", MessageBoxButtons.YesNo);
+
             if (DialogResult.Yes == result)
             {
+
+
+                await product.buy_product(product_list[digiger].OwnerEmail, product_list[digiger].ProductName, buyone);
                 this.Close();
-                DialogResult result1 = MessageBox.Show("您可以在我的資料中的訂單查詢追蹤你的訂單資訊", "購買成功", MessageBoxButtons.OK);
+                DialogResult result1 = MessageBox.Show("您可以在\"我的資料\"中的\"訂單查詢\"\n持續追蹤您的訂單資訊!", "購買成功", MessageBoxButtons.OK);
                 
             }
         }

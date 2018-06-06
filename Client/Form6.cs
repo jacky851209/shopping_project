@@ -23,6 +23,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.email = email;
             set_pic();
+            openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
         }
 
         private  void accept_Click(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)  // 開啟影像檔
             {
                 String input = openFileDialog1.FileName;

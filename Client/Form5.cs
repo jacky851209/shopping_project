@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.email.Text = mail;
             set_pic();
+            openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
         }
 
    
