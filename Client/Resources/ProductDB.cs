@@ -84,6 +84,19 @@ namespace WindowsFormsApplication1.Resources
             return list;
         }
 
+        public async Task<List<Product>> get_allproduct()
+        {
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+
+          
+            var list = await collection.Find(_ =>true).ToListAsync();
+
+            return list;
+        }
+
         public async Task<string> get_picture(String item, String email)
         {
 
