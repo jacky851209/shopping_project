@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
             if (DialogResult.Yes == result)
             {
                 this.Close();
-                DialogResult result1 = MessageBox.Show("您可以在我的資料中的訂單查詢追蹤你的訂單資訊", "購買成功", MessageBoxButtons.YesNo);
+                DialogResult result1 = MessageBox.Show("您可以在我的資料中的訂單查詢追蹤你的訂單資訊", "購買成功", MessageBoxButtons.OK);
                 
             }
         }
