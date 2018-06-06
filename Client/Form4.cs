@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
                     GroupBox gb = new GroupBox();
                     gb.Width = 200;
                     gb.Height = 335;
-                    gb.Margin = new Padding(10, 5, 10, 0);
+                    gb.Margin = new Padding(15, 20, 0, 20);
 
 
                     PictureBox picbox = new PictureBox();
@@ -153,6 +153,9 @@ namespace WindowsFormsApplication1
             f8.Show();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

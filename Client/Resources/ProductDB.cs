@@ -113,5 +113,23 @@ namespace WindowsFormsApplication1.Resources
             }
             return "ERROR";
         }
+
+        public async Task update_product(String email, String pro_name, String info, int price, int count, String image)
+        {
+
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+            var filter = Builders<Product>.Filter.And(
+                        Builders<Product>.Filter.Eq(p => p.ProductName, pro_name),
+                        Builders<Product>.Filter.Eq(p => p.OwnerEmail, email)
+            );
+            var result = await collection.FindOneAndUpdateAsync(
+                                filter,
+                                Builders<Product>.Update.Set("Infomation", info).Set("Price", price).Set("Count", count).Set("Product_image", image)
+                                );
+
+        }
     }
 }

@@ -31,6 +31,7 @@ namespace WindowsFormsApplication1
             Form6 f6 = new Form6(mail.ToString());
             f6.users.Text = this.users.Text;
             f6.Show();
+
         }
         private async void set_pic()
         {
@@ -47,7 +48,8 @@ namespace WindowsFormsApplication1
             pictureBox1.Image = img2;
         }
 
-        private async void set_product() {
+        private async void set_product()
+        {
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
             int count = product.sell_product(this.mail.ToString());
@@ -60,8 +62,8 @@ namespace WindowsFormsApplication1
                     GroupBox gb = new GroupBox();
                     gb.Width = 200;
                     gb.Height = 335;
-                    gb.Margin = new Padding(10, 5, 10, 0);
-                    
+                    gb.Margin = new Padding(15, 20, 0, 20);
+
 
                     PictureBox picbox = new PictureBox();
                     picbox.Width = 200;
@@ -107,7 +109,7 @@ namespace WindowsFormsApplication1
                     pro_price.AutoSize = true;
                     pro_price.Location = new Point(80, 245);
                     pro_price.Visible = true;
-                    pro_price.Text ="$"+ Convert.ToString(product_list[i].Price);
+                    pro_price.Text = "$ " + Convert.ToString(product_list[i].Price);
 
                     Label l4 = new Label();
                     l4.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -121,7 +123,7 @@ namespace WindowsFormsApplication1
                     pro_count.AutoSize = true;
                     pro_count.Location = new Point(80, 265);
                     pro_count.Visible = true;
-                    pro_count.Text = Convert.ToString(product_list[i].Count);
+                    pro_count.Text = Convert.ToString(product_list[i].Count) + "件";
 
                     Button btn = new Button();
                     btn.BackColor = Color.GreenYellow;
@@ -137,11 +139,11 @@ namespace WindowsFormsApplication1
                     set_pro_pic(picbox, product_list[i].Product_image);
                     picbox.Size = new System.Drawing.Size(200, 200);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
-                    
+
 
                     gb.Controls.Add(picbox);
                     gb.Controls.Add(l1);
-                    gb.Controls.Add (pro_name);
+                    gb.Controls.Add(pro_name);
                     gb.Controls.Add(l2);
                     gb.Controls.Add(pro_info);
                     gb.Controls.Add(l3);
@@ -170,8 +172,9 @@ namespace WindowsFormsApplication1
         private void btns_Click(object sender, EventArgs e)
         {
             int index = (int)(sender as Button).Tag;
-            Form9 f9 = new Form9(index);
+            Form9 f9 = new Form9(this.mail, index);
             f9.Show();
         }
+
     }
 }

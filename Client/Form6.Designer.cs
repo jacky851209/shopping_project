@@ -92,7 +92,7 @@
             // 
             // item
             // 
-            this.item.Location = new System.Drawing.Point(120, 118);
+            this.item.Location = new System.Drawing.Point(120, 117);
             this.item.Name = "item";
             this.item.Size = new System.Drawing.Size(352, 22);
             this.item.TabIndex = 15;
@@ -109,7 +109,7 @@
             // 
             // iteminfo
             // 
-            this.iteminfo.Location = new System.Drawing.Point(120, 162);
+            this.iteminfo.Location = new System.Drawing.Point(120, 161);
             this.iteminfo.Name = "iteminfo";
             this.iteminfo.Size = new System.Drawing.Size(352, 22);
             this.iteminfo.TabIndex = 17;
