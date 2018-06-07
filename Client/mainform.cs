@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            OpenForm(new Form4());
+            OpenForm(new Form4(email.Text.ToString()));
 
             this.button1.Enabled = false;
             this.button2.Enabled = true;

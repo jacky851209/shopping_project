@@ -12,10 +12,12 @@ namespace WindowsFormsApplication1
 {
     public partial class Form4 : Form
     {
+        String mail;
         List<Button> btns = new List<Button>();
-        public Form4()
+        public Form4(String email)
         {
             InitializeComponent();
+            this.mail = email;
             set_product();
         }
 
@@ -29,7 +31,7 @@ namespace WindowsFormsApplication1
             if (count > 0)
             {
                 var product_list = await product.get_allproduct();
-               
+
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -102,15 +104,24 @@ namespace WindowsFormsApplication1
 
                     btn.Width = 190;
                     btn.Height = 35;
-                    if (product_list[i].Count != 0)
+                    if (product_list[i].OwnerEmail == mail)
                     {
-                        btn.Text = "購買!";
-                        btn.BackColor = Color.GreenYellow;
+
+                        btn.Text = "您的商品!";
+                        btn.BackColor = Color.OrangeRed;
                     }
                     else
                     {
-                        btn.Text = "售完!   待補貨";
-                        btn.BackColor = Color.OrangeRed;
+                        if (product_list[i].Count != 0)
+                        {
+                            btn.Text = "購買!";
+                            btn.BackColor = Color.GreenYellow;
+                        }
+                        else
+                        {
+                            btn.Text = "售完!   待補貨";
+                            btn.BackColor = Color.OrangeRed;
+                        }
                     }
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
@@ -160,7 +171,7 @@ namespace WindowsFormsApplication1
             var Pcount = await product.get_allproduct();
 
             int index = (int)(sender as Button).Tag;
-            if (Pcount[index].Count != 0)
+            if (Pcount[index].Count != 0 && Pcount[index].OwnerEmail != mail)
             {
                 Form8 f8 = new Form8(index, this);
                 f8.Show();

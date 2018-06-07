@@ -57,6 +57,7 @@ namespace WindowsFormsApplication1
             {
                 var product_list = await product.get_product(this.mail.ToString());
                 List<Button> btns = new List<Button>();
+                List<Button> btns2 = new List<Button>();
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -127,13 +128,23 @@ namespace WindowsFormsApplication1
 
                     Button btn = new Button();
                     btn.BackColor = Color.GreenYellow;
-                    btn.Width = 190;
+                    btn.Width = 90;
                     btn.Height = 35;
                     btn.Text = "修改!";
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
                     btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
+
+                    Button btn2 = new Button();
+                    btn2.BackColor = Color.OrangeRed;
+                    btn2.Width = 90;
+                    btn2.Height = 35;
+                    btn2.Text = "刪除!";
+                    btn2.Location = new Point(105, 290);
+                    btns2.Add(btn2);
+                    btns2[i].Tag = i;
+                    btns2[i].Click += new EventHandler(this.btns2_Click);
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
                     set_pro_pic(picbox, product_list[i].Product_image);
@@ -151,7 +162,7 @@ namespace WindowsFormsApplication1
                     gb.Controls.Add(l4);
                     gb.Controls.Add(pro_count);
                     gb.Controls.Add(btn);
-
+                    gb.Controls.Add(btn2);
                     flowLayoutPanel1.Controls.Add(gb);
 
                 }
@@ -174,6 +185,20 @@ namespace WindowsFormsApplication1
             int index = (int)(sender as Button).Tag;
             Form9 f9 = new Form9(this.mail, index, this);
             f9.Show();
+        }
+
+        private async void btns2_Click(object sender, EventArgs e)
+        {
+            int index = (int)(sender as Button).Tag;
+            DialogResult result = MessageBox.Show("是否確定要刪除此商品!", "注意", MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == result)
+            {
+                WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+                var product_list = await product.get_product(this.mail.ToString());
+                await product.delete_product(product_list[index].OwnerEmail, product_list[index].ProductName);
+                RefreshForm();
+            }
+
         }
         public void RefreshForm()
         {
