@@ -154,3 +154,5 @@ D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.cspro
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form9.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form8.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form9.resources
+D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form8.resources
+D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.Form9.resources
