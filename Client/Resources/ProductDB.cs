@@ -91,8 +91,8 @@ namespace WindowsFormsApplication1.Resources
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
-          
-            var list = await collection.Find(_ =>true).ToListAsync();
+
+            var list = await collection.Find(_ => true).ToListAsync();
 
             return list;
         }
@@ -159,6 +159,31 @@ namespace WindowsFormsApplication1.Resources
                         Builders<Product>.Filter.Eq(p => p.OwnerEmail, email)
             );
             var DelMultiple = await collection.DeleteOneAsync(filter);
+
+        }
+
+        public async Task<List<Product>> search(String search, int price_type)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Product>("product");
+            var filter = Builders<Product>.Filter.Regex(p => p.ProductName, "^" + search + ".*$");
+
+            if (price_type == -1)
+            {
+                var DelMultiple = await collection.Find(filter).ToListAsync();
+                return DelMultiple;
+            }
+            else if (price_type == 0)
+            {
+                var DelMultiple = await collection.Find(filter).Sort(Builders<Product>.Sort.Ascending("Price")).ToListAsync();
+                return DelMultiple;
+            }
+            else
+            {
+                var DelMultiple = await collection.Find(filter).Sort(Builders<Product>.Sort.Descending("Price")).ToListAsync();
+                return DelMultiple;
+            }
 
         }
     }

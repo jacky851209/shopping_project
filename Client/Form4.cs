@@ -18,19 +18,30 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             this.mail = email;
-            set_product();
+            this.comboBox1.Items.Add("價格: 低到高");
+            this.comboBox1.Items.Add("價格: 高到低");
+            set_product(0, -1);
         }
 
-        private async void set_product()
+        private async void set_product(int number, int select)
         {
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
+            List<Resources.Product> production;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
-            var Pcount = await product.get_allproduct();
-            int count = Pcount.Count();
+            if (number == 0)
+            {
+                production = await product.get_allproduct();
+            }
+            else
+            {
+                production = await product.search(search.Text.ToString(), select);
+            }
+
+
+            int count = production.Count();
             if (count > 0)
             {
-                var product_list = await product.get_allproduct();
 
                 for (int i = 0; i < count; i++)
                 {
@@ -56,7 +67,7 @@ namespace WindowsFormsApplication1
                     pro_name.AutoSize = true;
                     pro_name.Location = new Point(80, 205);
                     pro_name.Visible = true;
-                    pro_name.Text = product_list[i].ProductName;
+                    pro_name.Text = production[i].ProductName;
 
                     Label l2 = new Label();
                     l2.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -70,7 +81,7 @@ namespace WindowsFormsApplication1
                     pro_info.AutoSize = true;
                     pro_info.Location = new Point(80, 225);
                     pro_info.Visible = true;
-                    pro_info.Text = product_list[i].Infomation;
+                    pro_info.Text = production[i].Infomation;
 
                     Label l3 = new Label();
                     l3.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -84,7 +95,7 @@ namespace WindowsFormsApplication1
                     pro_price.AutoSize = true;
                     pro_price.Location = new Point(80, 245);
                     pro_price.Visible = true;
-                    pro_price.Text = "$" + Convert.ToString(product_list[i].Price);
+                    pro_price.Text = "$ " + Convert.ToString(production[i].Price);
 
                     Label l4 = new Label();
                     l4.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -98,13 +109,13 @@ namespace WindowsFormsApplication1
                     pro_count.AutoSize = true;
                     pro_count.Location = new Point(80, 265);
                     pro_count.Visible = true;
-                    pro_count.Text = Convert.ToString(product_list[i].Count);
+                    pro_count.Text = Convert.ToString(production[i].Count);
 
                     Button btn = new Button();
 
                     btn.Width = 190;
                     btn.Height = 35;
-                    if (product_list[i].OwnerEmail == mail)
+                    if (production[i].OwnerEmail == mail)
                     {
 
                         btn.Text = "您的商品!";
@@ -112,7 +123,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        if (product_list[i].Count != 0)
+                        if (production[i].Count != 0)
                         {
                             btn.Text = "購買!";
                             btn.BackColor = Color.GreenYellow;
@@ -127,11 +138,11 @@ namespace WindowsFormsApplication1
                     btns.Add(btn);
                     btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
-                   
+
 
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
-                    set_pro_pic(picbox, product_list[i].Product_image);
+                    set_pro_pic(picbox, production[i].Product_image);
                     picbox.Size = new System.Drawing.Size(200, 200);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -155,7 +166,6 @@ namespace WindowsFormsApplication1
 
         private void set_pro_pic(PictureBox p1, string inputString)
         {
-
             byte[] imageBytes = Convert.FromBase64String(inputString);
             System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
 
@@ -177,17 +187,29 @@ namespace WindowsFormsApplication1
                 Form8 f8 = new Form8(index, this, mail);
                 f8.Show();
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            flowLayoutPanel1.Controls.Clear();
+            int select = comboBox1.SelectedIndex;
+            this.set_product(1, select);
         }
         public void RefreshForm()
         {
             flowLayoutPanel1.Controls.Clear();
-            this.set_product();
+            this.set_product(0, -1);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
