@@ -131,6 +131,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Buy.cs" />
+    <Compile Include="Resources\BuyDB.cs" />
     <Compile Include="Resources\Product.cs" />
     <Compile Include="Resources\ProductDB.cs" />
     <Compile Include="Resources\User.cs" />

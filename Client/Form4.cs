@@ -170,10 +170,11 @@ namespace WindowsFormsApplication1
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
             var Pcount = await product.get_allproduct();
 
+
             int index = (int)(sender as Button).Tag;
             if (Pcount[index].Count != 0 && Pcount[index].OwnerEmail != mail)
             {
-                Form8 f8 = new Form8(index, this);
+                Form8 f8 = new Form8(index, this, mail);
                 f8.Show();
             }
             
