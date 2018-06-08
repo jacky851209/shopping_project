@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1.Resources
         public void add_buy(String buyeremail, String item, int price, int count)
         {
             var coll = _mongoDatabase.GetCollection<Buy>("buy");
-            coll.Insert(new BsonDocument { { "Buyeremail", buyeremail }, { "Productname", item }, { "Price", price }, { "Count", count } });
+            coll.Insert(new BsonDocument { { "BuyerEmail", buyeremail }, { "ProductName", item }, { "Price", price }, { "Count", count } });
         }
 
         public int order_count(String email)

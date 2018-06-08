@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
 
         private void login_Click(object sender, EventArgs e)
         {
-            /*
+            
             WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
             if (user.login_success(email.Text.ToString(), password.Text.ToString()) == 0)
             {
@@ -47,8 +47,8 @@ namespace WindowsFormsApplication1
                 login_error1.Visible = false;
                 login_error2.Visible = true;
             }
-            */
-
+            
+/*
             SocketClient sc = SocketClient.GetInstance();
             int returnCode = sc.doLogin(email.Text.ToString(), password.Text.ToString());
             if (returnCode == 0)
@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
             {
                 login_error1.Visible = false;
                 login_error2.Visible = true;
-            }
+            }*/
         }
     }
 }

@@ -80,7 +80,8 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Order od = new Order(email.Text.ToString());
+            od.Show();
         }
     }
 }
