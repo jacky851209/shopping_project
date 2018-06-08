@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Resources
         public BuyDB()
         {
             // MongoDB 連線字串
-            string connectionString = "mongodb://localhost";
+            string connectionString = "mongodb://140.138.145.59";
             // 產生 MongoClient 物件
             _mongoClient = new MongoClient(connectionString);
             // 取得 MongoServer 物件
@@ -32,15 +32,15 @@ namespace WindowsFormsApplication1.Resources
             _mongoCollection1 = _mongoDatabase.GetCollection<Buy>("buy");
         }
 
-        public void add_buy(String buyeremail, String item, int price, int count)
+        public void add_buy(String buyeremail, String item, int price, int count,String owneremail)
         {
             var coll = _mongoDatabase.GetCollection<Buy>("buy");
-            coll.Insert(new BsonDocument { { "BuyerEmail", buyeremail }, { "ProductName", item }, { "Price", price }, { "Count", count } });
+            coll.Insert(new BsonDocument { { "BuyerEmail", buyeremail }, { "ProductName", item }, { "Price", price }, { "Count", count }, { "Oweneremail", owneremail}});
         }
 
         public int order_count(String email)
         {
-            var client = new MongoClient("mongodb://localhost:27017");
+            var client = new MongoClient("mongodb://140.138.145.59:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Buy>("buy");
 
@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1.Resources
 
         public async Task<List<Buy>> get_order(String email)
         {
-            var client = new MongoClient("mongodb://localhost:27017");
+            var client = new MongoClient("mongodb://140.138.145.59:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Buy>("buy");
 
@@ -61,6 +61,19 @@ namespace WindowsFormsApplication1.Resources
             var list = await collection.Find(filter).ToListAsync();
 
             return list;
+        }
+
+        public int howmanybuyer(String email)
+        {
+            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Buy>("buy");
+
+
+            var filter = Builders<Buy>.Filter.Eq(x => x.Oweneremail, email);
+            var results = collection.Find(filter).Count();
+
+            return (int)results;
         }
     }
 }

@@ -52,6 +52,8 @@ namespace WindowsFormsApplication1
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+            WindowsFormsApplication1.Resources.BuyDB buy = new WindowsFormsApplication1.Resources.BuyDB();
+            notify.Text = buy.howmanybuyer(mail).ToString();
             int count = product.sell_product(this.mail.ToString());
             if (count > 0)
             {
@@ -204,6 +206,11 @@ namespace WindowsFormsApplication1
         {
             flowLayoutPanel1.Controls.Clear();
             this.set_product();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

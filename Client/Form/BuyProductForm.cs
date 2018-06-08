@@ -15,12 +15,14 @@ namespace WindowsFormsApplication1
         int digiger;
         BuyForm form;
         String buyeremail;
-        public BuyProductForm(int index,BuyForm form4,String buyemail)
+        String owneremail;
+        public BuyProductForm(int index,BuyForm form4,String buyemail,String Owneremail)
         {
             InitializeComponent();
             this.digiger = index;
             this.form = form4;
             this.buyeremail = buyemail;
+            this.owneremail = Owneremail;
             set_product(digiger);
         }
 
@@ -60,7 +62,7 @@ namespace WindowsFormsApplication1
             {
                 WindowsFormsApplication1.Resources.BuyDB buy = new WindowsFormsApplication1.Resources.BuyDB();
              
-                buy.add_buy(buyeremail,product_list[digiger].ProductName.ToString(),product_list[digiger].Price,int.Parse(buy_howmuch.Value.ToString()));
+                buy.add_buy(buyeremail,product_list[digiger].ProductName.ToString(),product_list[digiger].Price,int.Parse(buy_howmuch.Value.ToString()),owneremail);
 
                 await product.buy_product(product_list[digiger].OwnerEmail, product_list[digiger].ProductName, buyone);
                 DialogResult result1 = MessageBox.Show("您可以在\"我的資料\"中的\"訂單查詢\"\n持續追蹤您的訂單資訊!", "購買成功", MessageBoxButtons.OK);

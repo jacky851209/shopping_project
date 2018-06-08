@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1
             int index = (int)(sender as Button).Tag;
             if (Pcount[index].Count != 0 && Pcount[index].OwnerEmail != mail)
             {
-                BuyProductForm f8 = new BuyProductForm(index, this, mail);
+                BuyProductForm f8 = new BuyProductForm(index, this, mail, Pcount[index].OwnerEmail);
                 f8.Show();
             }
 
