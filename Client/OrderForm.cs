@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Order : Form
+    public partial class OrderForm : Form
     {
         String mail;
-        public Order(String email)
+        public OrderForm(String email)
         {
             this.mail = email;
             InitializeComponent();

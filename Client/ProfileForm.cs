@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form5 : Form
+    public partial class ProfileForm : Form
     {
 
-        public Form5(String mail)
+        public ProfileForm(String mail)
         {
             InitializeComponent();
             this.email.Text = mail;
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
    
         private void button1_Click(object sender, EventArgs e)
         {
-            Form7 f7 = new Form7(this.email.Text.ToString());
+            ChangePasswordForm f7 = new ChangePasswordForm(this.email.Text.ToString());
             f7.Show();
         }
 
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Order od = new Order(email.Text.ToString());
+            OrderForm od = new OrderForm(email.Text.ToString());
             od.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form5
+    partial class ProfileForm
     {
         /// <summary>
         /// Required designer variable.

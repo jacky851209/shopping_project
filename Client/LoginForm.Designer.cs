@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// 設計工具所需的變數。

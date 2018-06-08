@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form8
+    partial class BuyProductForm
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Order
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.

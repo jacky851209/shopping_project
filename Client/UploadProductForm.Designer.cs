@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form6
+    partial class UploadProductForm
     {
         /// <summary>
         /// Required designer variable.

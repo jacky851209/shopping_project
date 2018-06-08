@@ -7,26 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form7 : Form
+    public partial class RegisterForm : Form
     {
-        public Form7(String mail)
+        public RegisterForm()
         {
             InitializeComponent();
-            this.email.Text = mail;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void ok_Click(object sender, EventArgs e)
+        private void signup_Click(object sender, EventArgs e)
         {
             int allisok = 0;
-            if (current.Text == "")
+            if (username.Text == "")
+            {
+                label6.Visible = true;
+            }
+            else
+            {
+                label6.Visible = false;
+                allisok += 1;
+            }
+
+
+            if (email.Text == "")
             {
                 label10.Visible = false;
                 label7.Visible = true;
@@ -38,8 +45,7 @@ namespace WindowsFormsApplication1
                 allisok += 1;
             }
 
-
-            if (newp.Text == "")
+            if (password.Text == "")
             {
                 label8.Visible = true;
             }
@@ -48,8 +54,7 @@ namespace WindowsFormsApplication1
                 label8.Visible = false;
                 allisok += 1;
             }
-
-            if (confirmp.Text == "" || confirmp.Text!=newp.Text)
+            if (confirmpassword.Text != password.Text)
             {
                 label3.Visible = true;
             }
@@ -58,25 +63,21 @@ namespace WindowsFormsApplication1
                 label3.Visible = false;
                 allisok += 1;
             }
-
-            if (allisok == 3)
+            if (allisok == 4)
             {
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                if (current.Text == await user.get_password(this.email.Text))
+                if (user.find_the_user(email.Text.ToString()) == false)
                 {
-                    await user.change_password(this.email.Text, newp.Text);
-                    DialogResult result = MessageBox.Show("密碼更改完畢!", "完成", MessageBoxButtons.OK);
+                    user.InsertOne(username.Text.ToString(), email.Text.ToString(), password.Text.ToString());
                     this.Close();
                 }
-                else {
+                else
+                {
                     label7.Visible = false;
                     label10.Visible = true;
                 }
             }
-        }
 
-        private void Form7_Load(object sender, EventArgs e)
-        {
 
         }
     }

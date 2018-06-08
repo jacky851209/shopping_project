@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form7
+    partial class ChangePasswordForm
     {
         /// <summary>
         /// Required designer variable.

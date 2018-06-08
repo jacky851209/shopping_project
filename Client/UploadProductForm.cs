@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form6 : Form
+    public partial class UploadProductForm : Form
     {
-        Form3 form3;
+        SellForm form3;
         int w, h;
         Bitmap img1;
         String email;
         String image_path;
 
-        public Form6(String email, Form3 f3)
+        public UploadProductForm(String email, SellForm f3)
         {
             InitializeComponent();
             this.email = email;

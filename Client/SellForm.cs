@@ -10,40 +10,54 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form4 : Form
+    public partial class SellForm : Form
     {
+   
         String mail;
-        
-        public Form4(String email)
+        public SellForm(String email)
         {
+            this.ControlBox = false;
             InitializeComponent();
             this.mail = email;
-            this.comboBox1.Items.Add("價格: 低到高");
-            this.comboBox1.Items.Add("價格: 高到低");
-            set_product(0, -1);
+            set_pic();
+            set_product();
+
         }
 
-        private async void set_product(int number, int select)
+
+        private void new_item_Click(object sender, EventArgs e)
         {
-            List<Button> btns = new List<Button>();
+            UploadProductForm f6 = new UploadProductForm(mail.ToString(), this);
+            f6.users.Text = this.users.Text;
+            f6.Show();
+
+        }
+        private async void set_pic()
+        {
+
+            WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+            String inputString = await user.get_picture(this.mail.ToString());
+
+            byte[] imageBytes = Convert.FromBase64String(inputString);
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
+
+            Image image = Image.FromStream(ms, true, true);
+            Bitmap img2 = new Bitmap(image, 80, 80);
+
+            pictureBox1.Image = img2;
+        }
+
+        private async void set_product()
+        {
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
-            List<Resources.Product> production;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
-            if (number == 0)
-            {
-                production = await product.get_allproduct();
-            }
-            else
-            {
-                production = await product.search(search.Text.ToString(), select);
-            }
-
-
-            int count = production.Count();
+            int count = product.sell_product(this.mail.ToString());
             if (count > 0)
             {
-
+                var product_list = await product.get_product(this.mail.ToString());
+                List<Button> btns = new List<Button>();
+                List<Button> btns2 = new List<Button>();
                 for (int i = 0; i < count; i++)
                 {
                     GroupBox gb = new GroupBox();
@@ -68,7 +82,7 @@ namespace WindowsFormsApplication1
                     pro_name.AutoSize = true;
                     pro_name.Location = new Point(80, 205);
                     pro_name.Visible = true;
-                    pro_name.Text = production[i].ProductName;
+                    pro_name.Text = product_list[i].ProductName;
 
                     Label l2 = new Label();
                     l2.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -82,7 +96,7 @@ namespace WindowsFormsApplication1
                     pro_info.AutoSize = true;
                     pro_info.Location = new Point(80, 225);
                     pro_info.Visible = true;
-                    pro_info.Text = production[i].Infomation;
+                    pro_info.Text = product_list[i].Infomation;
 
                     Label l3 = new Label();
                     l3.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -96,7 +110,7 @@ namespace WindowsFormsApplication1
                     pro_price.AutoSize = true;
                     pro_price.Location = new Point(80, 245);
                     pro_price.Visible = true;
-                    pro_price.Text = "$ " + Convert.ToString(production[i].Price);
+                    pro_price.Text = "$ " + Convert.ToString(product_list[i].Price);
 
                     Label l4 = new Label();
                     l4.Font = new Font("Arial", 12, FontStyle.Regular);
@@ -110,40 +124,30 @@ namespace WindowsFormsApplication1
                     pro_count.AutoSize = true;
                     pro_count.Location = new Point(80, 265);
                     pro_count.Visible = true;
-                    pro_count.Text = Convert.ToString(production[i].Count);
+                    pro_count.Text = Convert.ToString(product_list[i].Count) + "件";
 
                     Button btn = new Button();
-
-                    btn.Width = 190;
+                    btn.BackColor = Color.GreenYellow;
+                    btn.Width = 90;
                     btn.Height = 35;
-                    if (production[i].OwnerEmail == mail)
-                    {
-
-                        btn.Text = "您的商品!";
-                        btn.BackColor = Color.OrangeRed;
-                    }
-                    else
-                    {
-                        if (production[i].Count != 0)
-                        {
-                            btn.Text = "購買!";
-                            btn.BackColor = Color.GreenYellow;
-                        }
-                        else
-                        {
-                            btn.Text = "售完!   待補貨";
-                            btn.BackColor = Color.OrangeRed;
-                        }
-                    }
+                    btn.Text = "修改!";
                     btn.Location = new Point(5, 290);
                     btns.Add(btn);
                     btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
 
-
+                    Button btn2 = new Button();
+                    btn2.BackColor = Color.OrangeRed;
+                    btn2.Width = 90;
+                    btn2.Height = 35;
+                    btn2.Text = "刪除!";
+                    btn2.Location = new Point(105, 290);
+                    btns2.Add(btn2);
+                    btns2[i].Tag = i;
+                    btns2[i].Click += new EventHandler(this.btns2_Click);
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
-                    set_pro_pic(picbox, production[i].Product_image);
+                    set_pro_pic(picbox, product_list[i].Product_image);
                     picbox.Size = new System.Drawing.Size(200, 200);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -158,7 +162,7 @@ namespace WindowsFormsApplication1
                     gb.Controls.Add(l4);
                     gb.Controls.Add(pro_count);
                     gb.Controls.Add(btn);
-
+                    gb.Controls.Add(btn2);
                     flowLayoutPanel1.Controls.Add(gb);
 
                 }
@@ -167,6 +171,7 @@ namespace WindowsFormsApplication1
 
         private void set_pro_pic(PictureBox p1, string inputString)
         {
+
             byte[] imageBytes = Convert.FromBase64String(inputString);
             System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
 
@@ -175,42 +180,30 @@ namespace WindowsFormsApplication1
 
             p1.Image = img2;
         }
-
-        private async void btns_Click(object sender, EventArgs e)
+        private void btns_Click(object sender, EventArgs e)
         {
-            WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
-            var Pcount = await product.get_allproduct();
-
-
             int index = (int)(sender as Button).Tag;
-            if (Pcount[index].Count != 0 && Pcount[index].OwnerEmail != mail)
-            {
-                Form8 f8 = new Form8(index, this, mail);
-                f8.Show();
-            }
-
+            ModifyProductForm f9 = new ModifyProductForm(this.mail, index, this);
+            f9.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void btns2_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            int select = comboBox1.SelectedIndex;
-            this.set_product(1, select);
+            int index = (int)(sender as Button).Tag;
+            DialogResult result = MessageBox.Show("是否確定要刪除此商品!", "注意", MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == result)
+            {
+                WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+                var product_list = await product.get_product(this.mail.ToString());
+                await product.delete_product(product_list[index].OwnerEmail, product_list[index].ProductName);
+                RefreshForm();
+            }
+
         }
         public void RefreshForm()
         {
             flowLayoutPanel1.Controls.Clear();
-            this.set_product(0, -1);
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void search_TextChanged(object sender, EventArgs e)
-        {
-
+            this.set_product();
         }
     }
 }

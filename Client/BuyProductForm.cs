@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form8 : Form
+    public partial class BuyProductForm : Form
     {
         int digiger;
-        Form4 form;
+        BuyForm form;
         String buyeremail;
-        public Form8(int index,Form4 form4,String buyemail)
+        public BuyProductForm(int index,BuyForm form4,String buyemail)
         {
             InitializeComponent();
             this.digiger = index;

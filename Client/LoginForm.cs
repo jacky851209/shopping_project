@@ -13,16 +13,16 @@ using MongoDB.Driver;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void register_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            RegisterForm f = new RegisterForm();
             f.Show(this);
         }
 

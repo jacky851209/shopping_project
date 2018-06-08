@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            OpenForm(new Form4(email.Text.ToString()));
+            OpenForm(new BuyForm(email.Text.ToString()));
 
             this.button1.Enabled = false;
             this.button2.Enabled = true;
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            Form5 f5 = new Form5(email.Text.ToString());
+            ProfileForm f5 = new ProfileForm(email.Text.ToString());
             f5.users.Text = username.Text;
             f5.email.Text = email.Text;
             OpenForm(f5);
@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            Form3 f3 = new Form3(email.Text.ToString());
+            SellForm f3 = new SellForm(email.Text.ToString());
             f3.users.Text = username.Text;
             OpenForm(f3);
 

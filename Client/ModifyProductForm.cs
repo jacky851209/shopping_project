@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form9 : Form
+    public partial class ModifyProductForm : Form
     {
         int digiger;
-        Form3 f3;
+        SellForm f3;
         String image_path;
         String mail;
-        public Form9(String email, int index, Form3 form3)
+        public ModifyProductForm(String email, int index, SellForm form3)
         {
             InitializeComponent();
 
