@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Resources
         public ProductDB()
         {
             // MongoDB 連線字串
-            string connectionString = "mongodb://140.138.145.59";
+            string connectionString = "mongodb://localhost";
             // 產生 MongoClient 物件
             _mongoClient = new MongoClient(connectionString);
             // 取得 MongoServer 物件
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Resources
 
         public bool find_item_is_exist(String item, String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1.Resources
 
         public int sell_product(String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<List<Product>> get_product(String email)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<List<Product>> get_allproduct()
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<string> get_picture(String item, String email)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
 
@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task update_product(String email, String pro_name, String info, int price, int count, String image)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
             var filter = Builders<Product>.Filter.And(
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task buy_product(String email, String pro_name, int buy)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
             var filter = Builders<Product>.Filter.And(
@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task delete_product(String email, String pro_name)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
             var filter = Builders<Product>.Filter.And(
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1.Resources
 
         public async Task<List<Product>> search(String search, int price_type)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
             var filter = Builders<Product>.Filter.Regex(p => p.ProductName, search + ".*$");

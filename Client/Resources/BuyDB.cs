@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Resources
         public BuyDB()
         {
             // MongoDB 連線字串
-            string connectionString = "mongodb://140.138.145.59";
+            string connectionString = "mongodb://localhost";
             // 產生 MongoClient 物件
             _mongoClient = new MongoClient(connectionString);
             // 取得 MongoServer 物件
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Resources
 
         public int order_count(String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Buy>("buy");
 
@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1.Resources
 
         public async Task<List<Buy>> get_order(String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Buy>("buy");
 
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1.Resources
 
         public int howmanybuyer(String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Buy>("buy");
 

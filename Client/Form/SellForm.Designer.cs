@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.notify = new System.Windows.Forms.Button();
+            this.number = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,12 +52,12 @@
             // 
             // new_item
             // 
-            this.new_item.BackColor = System.Drawing.Color.Silver;
+            this.new_item.BackColor = System.Drawing.Color.LightGreen;
             this.new_item.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.new_item.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.new_item.Location = new System.Drawing.Point(369, 106);
+            this.new_item.ForeColor = System.Drawing.Color.Blue;
+            this.new_item.Location = new System.Drawing.Point(372, 109);
             this.new_item.Name = "new_item";
-            this.new_item.Size = new System.Drawing.Size(102, 34);
+            this.new_item.Size = new System.Drawing.Size(100, 34);
             this.new_item.TabIndex = 12;
             this.new_item.Text = "+ 新增商品";
             this.new_item.UseVisualStyleBackColor = false;
@@ -67,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(11, 108);
+            this.label1.Location = new System.Drawing.Point(12, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 13;
@@ -104,13 +105,28 @@
             // 
             // notify
             // 
-            this.notify.Location = new System.Drawing.Point(278, 108);
+            this.notify.BackColor = System.Drawing.Color.LightGreen;
+            this.notify.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.notify.ForeColor = System.Drawing.Color.Blue;
+            this.notify.Location = new System.Drawing.Point(249, 109);
             this.notify.Name = "notify";
-            this.notify.Size = new System.Drawing.Size(75, 23);
+            this.notify.Size = new System.Drawing.Size(100, 34);
             this.notify.TabIndex = 24;
-            this.notify.Text = "button1";
-            this.notify.UseVisualStyleBackColor = true;
+            this.notify.Text = "通知";
+            this.notify.UseVisualStyleBackColor = false;
             this.notify.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // number
+            // 
+            this.number.AutoSize = true;
+            this.number.BackColor = System.Drawing.Color.Red;
+            this.number.Font = new System.Drawing.Font("華康儷粗黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.number.ForeColor = System.Drawing.Color.PowderBlue;
+            this.number.Location = new System.Drawing.Point(332, 101);
+            this.number.Name = "number";
+            this.number.Size = new System.Drawing.Size(26, 16);
+            this.number.TabIndex = 25;
+            this.number.Text = "12";
             // 
             // SellForm
             // 
@@ -118,6 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(484, 611);
+            this.Controls.Add(this.number);
             this.Controls.Add(this.notify);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
@@ -143,5 +160,7 @@
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button notify;
+        private System.Windows.Forms.Label number;
+
     }
 }

@@ -80,7 +80,7 @@
             this.update_pass.Font = new System.Drawing.Font("微軟正黑體", 16F);
             this.update_pass.Location = new System.Drawing.Point(12, 284);
             this.update_pass.Name = "update_pass";
-            this.update_pass.Size = new System.Drawing.Size(465, 33);
+            this.update_pass.Size = new System.Drawing.Size(465, 34);
             this.update_pass.TabIndex = 18;
             this.update_pass.Text = "        變更密碼                                      >";
             this.update_pass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,9 +136,9 @@
             this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout.Font = new System.Drawing.Font("微軟正黑體", 16F);
             this.logout.ForeColor = System.Drawing.Color.Red;
-            this.logout.Location = new System.Drawing.Point(12, 487);
+            this.logout.Location = new System.Drawing.Point(12, 486);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(465, 34);
+            this.logout.Size = new System.Drawing.Size(465, 36);
             this.logout.TabIndex = 26;
             this.logout.Text = "                                登出 ";
             this.logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +234,7 @@
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 16F);
             this.button1.Location = new System.Drawing.Point(12, 324);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(465, 33);
+            this.button1.Size = new System.Drawing.Size(465, 34);
             this.button1.TabIndex = 35;
             this.button1.Text = "        變更頭貼                                      >";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,16 +247,16 @@
             this.found.FlatAppearance.BorderSize = 0;
             this.found.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.found.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.found.Location = new System.Drawing.Point(12, 366);
+            this.found.Location = new System.Drawing.Point(12, 364);
             this.found.Name = "found";
-            this.found.Size = new System.Drawing.Size(465, 33);
+            this.found.Size = new System.Drawing.Size(465, 34);
             this.found.TabIndex = 36;
             this.found.Text = "        訂單查詢                                      >";
             this.found.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.found.UseVisualStyleBackColor = false;
             this.found.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form5
+            // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -280,7 +280,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
+            this.Name = "ProfileForm";
             this.Text = "Form5";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -123,11 +123,11 @@
     <Compile Include="Form\ModifyProductForm.Designer.cs">
       <DependentUpon>ModifyProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\mainform.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\mainform.Designer.cs">
-      <DependentUpon>mainform.cs</DependentUpon>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\OrderForm.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="Form\ModifyProductForm.resx">
       <DependentUpon>ModifyProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\mainform.resx">
-      <DependentUpon>mainform.cs</DependentUpon>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>

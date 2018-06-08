@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Resources
         public UserDB()
         {
             // MongoDB 連線字串
-            string connectionString = "mongodb://140.138.145.59";
+            string connectionString = "mongodb://localhost";
             // 產生 MongoClient 物件
             _mongoClient = new MongoClient(connectionString);
             // 取得 MongoServer 物件
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Resources
         }
         public bool find_the_user(String email)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<string> get_user_name(String email)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<string> get_password(String email)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Resources
 
         public int login_success(String email, String password)
         {
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task change_password(String email, String pass)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1.Resources
             byte[] imageArray = System.IO.File.ReadAllBytes(image_path);
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1.Resources
         public async Task<string> get_picture(String email)
         {
 
-            var client = new MongoClient("mongodb://140.138.145.59:27017");
+            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<User>("user");
 
