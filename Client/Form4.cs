@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class Form4 : Form
     {
         String mail;
-        List<Button> btns = new List<Button>();
+        
         public Form4(String email)
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
 
         private async void set_product(int number, int select)
         {
+            List<Button> btns = new List<Button>();
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             List<Resources.Product> production;

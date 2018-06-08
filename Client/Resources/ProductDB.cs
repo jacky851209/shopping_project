@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1.Resources
             var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("shopping");
             var collection = database.GetCollection<Product>("product");
-            var filter = Builders<Product>.Filter.Regex(p => p.ProductName, "^" + search + ".*$");
+            var filter = Builders<Product>.Filter.Regex(p => p.ProductName, search + ".*$");
 
             if (price_type == -1)
             {
