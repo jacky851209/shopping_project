@@ -36,10 +36,12 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.pname,
             this.pcount,
             this.pprice});
+            this.listView1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(348, 238);
@@ -50,25 +52,26 @@
             // pname
             // 
             this.pname.Text = "商品名稱";
-            this.pname.Width = 248;
+            this.pname.Width = 214;
             // 
             // pcount
             // 
             this.pcount.Text = "數量";
-            this.pcount.Width = 44;
+            this.pcount.Width = 56;
             // 
             // pprice
             // 
             this.pprice.Text = "總金額";
-            this.pprice.Width = 50;
+            this.pprice.Width = 73;
             // 
-            // Order
+            // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(372, 262);
             this.Controls.Add(this.listView1);
-            this.Name = "Order";
+            this.Name = "OrderForm";
             this.Text = "Order";
             this.ResumeLayout(false);
 

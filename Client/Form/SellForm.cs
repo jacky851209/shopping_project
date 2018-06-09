@@ -14,11 +14,15 @@ namespace WindowsFormsApplication1
     {
    
         String mail;
+
+        int counting_product = 0;
         public SellForm(String email)
         {
             this.ControlBox = false;
             InitializeComponent();
             this.mail = email;
+            this.number.Visible = false;
+            set_notify();
             set_pic();
             set_product();
 
@@ -53,7 +57,6 @@ namespace WindowsFormsApplication1
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
             WindowsFormsApplication1.Resources.BuyDB buy = new WindowsFormsApplication1.Resources.BuyDB();
-            notify.Text = buy.howmanybuyer(mail).ToString();
             int count = product.sell_product(this.mail.ToString());
             if (count > 0)
             {
@@ -182,6 +185,23 @@ namespace WindowsFormsApplication1
 
             p1.Image = img2;
         }
+
+        private void set_notify()
+        {
+
+            WindowsFormsApplication1.Resources.BuyDB buy = new WindowsFormsApplication1.Resources.BuyDB();
+            int counting = buy.howmanybuyer(this.mail.ToString());
+            if (counting > counting_product) {
+                number.Text = (counting - counting_product).ToString();
+                counting_product = counting;
+                number.Visible = true;
+            }
+            else{
+                number.Visible = false;
+            }
+
+
+        }
         private void btns_Click(object sender, EventArgs e)
         {
             int index = (int)(sender as Button).Tag;
@@ -210,7 +230,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            set_notify();
         }
     }
 }

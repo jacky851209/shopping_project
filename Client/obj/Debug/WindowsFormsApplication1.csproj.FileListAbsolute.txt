@@ -218,3 +218,4 @@ C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.BuyProductForm.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.ModifyProductForm.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.OrderForm.resources
+C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

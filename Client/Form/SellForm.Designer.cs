@@ -112,7 +112,7 @@
             this.notify.Name = "notify";
             this.notify.Size = new System.Drawing.Size(100, 34);
             this.notify.TabIndex = 24;
-            this.notify.Text = "通知";
+            this.notify.Text = "商品通知";
             this.notify.UseVisualStyleBackColor = false;
             this.notify.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -122,11 +122,11 @@
             this.number.BackColor = System.Drawing.Color.Red;
             this.number.Font = new System.Drawing.Font("華康儷粗黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.number.ForeColor = System.Drawing.Color.PowderBlue;
-            this.number.Location = new System.Drawing.Point(332, 101);
+            this.number.Location = new System.Drawing.Point(337, 103);
             this.number.Name = "number";
-            this.number.Size = new System.Drawing.Size(26, 16);
+            this.number.Size = new System.Drawing.Size(17, 16);
             this.number.TabIndex = 25;
-            this.number.Text = "12";
+            this.number.Text = "1";
             // 
             // SellForm
             // 
