@@ -75,5 +75,18 @@ namespace WindowsFormsApplication1.Resources
 
             return (int)results;
         }
+
+        public async Task<List<Buy>> order_notify(String email)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("shopping");
+            var collection = database.GetCollection<Buy>("buy");
+
+            var filter = Builders<Buy>.Filter.Eq(x => x.Oweneremail, email);
+            var list = await collection.Find(filter).ToListAsync();
+
+            return list;
+        }
+
     }
 }
