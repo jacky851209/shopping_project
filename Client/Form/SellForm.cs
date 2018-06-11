@@ -133,17 +133,17 @@ namespace WindowsFormsApplication1
 
                     Button btn = new Button();
                     btn.BackColor = Color.GreenYellow;
-                    btn.Width = 90;
+                    btn.Width = 85;
                     btn.Height = 35;
                     btn.Text = "修改!";
-                    btn.Location = new Point(5, 290);
+                    btn.Location = new Point(10, 290);
                     btns.Add(btn);
                     btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
 
                     Button btn2 = new Button();
                     btn2.BackColor = Color.OrangeRed;
-                    btn2.Width = 90;
+                    btn2.Width = 85;
                     btn2.Height = 35;
                     btn2.Text = "刪除!";
                     btn2.Location = new Point(105, 290);

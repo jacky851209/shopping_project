@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
         private async void set_product(int number, int select)
         {
             List<Button> btns = new List<Button>();
+            List<Button> btns2 = new List<Button>();
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             List<Resources.Product> production;
@@ -114,7 +115,7 @@ namespace WindowsFormsApplication1
 
                     Button btn = new Button();
 
-                    btn.Width = 190;
+                    btn.Width = 115;
                     btn.Height = 35;
                     if (production[i].OwnerEmail == mail)
                     {
@@ -131,7 +132,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            btn.Text = "售完!   待補貨";
+                            btn.Text = "售完! 待補貨";
                             btn.BackColor = Color.OrangeRed;
                         }
                     }
@@ -140,7 +141,15 @@ namespace WindowsFormsApplication1
                     btns[i].Tag = i;
                     btns[i].Click += new EventHandler(this.btns_Click);
 
-
+                    Button btn2 = new Button();
+                    btn2.BackColor = Color.GreenYellow;
+                    btn2.Width = 70;
+                    btn2.Height = 35;
+                    btn2.Text = "留言";
+                    btn2.Location = new Point(125, 290);
+                    btns2.Add(btn2);
+                    btns2[i].Tag = i;
+                    btns2[i].Click += new EventHandler(this.btns2_Click);
 
                     //picbox.Image = WindowsFormsApplication1.Properties.Resources.face_photo;
                     set_pro_pic(picbox, production[i].Product_image);
@@ -158,7 +167,7 @@ namespace WindowsFormsApplication1
                     gb.Controls.Add(l4);
                     gb.Controls.Add(pro_count);
                     gb.Controls.Add(btn);
-
+                    gb.Controls.Add(btn2);
                     flowLayoutPanel1.Controls.Add(gb);
 
                 }
@@ -197,6 +206,11 @@ namespace WindowsFormsApplication1
             int select = comboBox1.SelectedIndex;
             this.set_product(1, select);
         }
+        private async void btns2_Click(object sender, EventArgs e)
+        {
+           
+
+        }
         public void RefreshForm()
         {
             flowLayoutPanel1.Controls.Clear();
@@ -212,5 +226,6 @@ namespace WindowsFormsApplication1
         {
 
         }
+
     }
 }
