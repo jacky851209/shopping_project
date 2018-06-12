@@ -15,7 +15,6 @@ namespace WindowsFormsApplication1.Resources
         public string ProductName { get; set; }
         public string BuyerEmail { get; set; }
         public string SendMessage { get; set; }
-        public string User_image { get; set; }
         public string OwnerEmail { get; set; }
     }
 }

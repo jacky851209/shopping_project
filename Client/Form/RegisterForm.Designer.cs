@@ -46,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // password
@@ -240,12 +241,27 @@
             this.label10.Text = "X此帳號已經存在";
             this.label10.Visible = false;
             // 
-            // Form2
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cancel.Location = new System.Drawing.Point(60, 401);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(150, 34);
+            this.cancel.TabIndex = 36;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(434, 461);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -264,7 +280,7 @@
             this.Controls.Add(this.email1);
             this.Controls.Add(this.signup);
             this.Controls.Add(this.reg);
-            this.Name = "Form2";
+            this.Name = "RegisterForm";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,5 +307,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button cancel;
     }
 }

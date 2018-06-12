@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApplication1
 {
     public partial class BuyForm : Form
@@ -37,7 +38,8 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                production = await product.search(search.Text.ToString(), select);
+               
+                production = await product.search("/"+ search.Text.ToString() + "/gi" , select);
             }
 
 

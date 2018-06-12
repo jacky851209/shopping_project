@@ -44,9 +44,10 @@
             this.pemail,
             this.pconut});
             this.listView1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.listView1.Location = new System.Drawing.Point(12, 15);
+            this.listView1.Location = new System.Drawing.Point(9, 12);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(463, 296);
+            this.listView1.Size = new System.Drawing.Size(348, 238);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -72,10 +73,12 @@
             // 
             // NotifyOwnerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 328);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(372, 262);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NotifyOwnerForm";
             this.Text = "NotifyOwnerForm";
             this.ResumeLayout(false);

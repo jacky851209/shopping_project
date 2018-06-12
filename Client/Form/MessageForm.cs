@@ -12,7 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class MessageForm : Form
     {
-
+        WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
+        WindowsFormsApplication1.Resources.ProductDB pro = new WindowsFormsApplication1.Resources.ProductDB();
+        WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
+        Bitmap star = new Bitmap(Properties.Resources.star, 25, 25);
+        Bitmap ystar = new Bitmap(Properties.Resources.Ystar, 25, 25);
         String productname;
         String buyeremail;
         String Owneremail;
@@ -25,6 +29,7 @@ namespace WindowsFormsApplication1
             this.buyeremail = email;
             this.Owneremail = omail;
             pnamelabel.Text = productname;
+            set_score_star();
             set_msg(0);
         }
 
@@ -32,7 +37,7 @@ namespace WindowsFormsApplication1
         {
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
-            WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
+
             count = msg.find_msg_is_exist(productname);
             List<Resources.Message> send_msg;
             if (count < 0)
@@ -50,8 +55,7 @@ namespace WindowsFormsApplication1
                     PictureBox picbox = new PictureBox();
                     picbox.Width = 30;
                     picbox.Height = 30;
-
-                    set_msg_pic(picbox, send_msg[i].User_image);
+                    set_msg_pic(picbox, await user.get_picture(send_msg[i].BuyerEmail));
                     picbox.Size = new System.Drawing.Size(30, 30);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -89,8 +93,6 @@ namespace WindowsFormsApplication1
         private async void set_onemsg(int number)
         {
 
-
-            WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
             count = msg.find_msg_is_exist(productname);
             List<Resources.Message> send_msg;
 
@@ -104,7 +106,7 @@ namespace WindowsFormsApplication1
             picbox.Width = 30;
             picbox.Height = 30;
 
-            set_msg_pic(picbox, send_msg[count - 1].User_image);
+            set_msg_pic(picbox, await user.get_picture(send_msg[count - 1].BuyerEmail));
             picbox.Size = new System.Drawing.Size(30, 30);
             picbox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -143,16 +145,16 @@ namespace WindowsFormsApplication1
         }
 
 
-        private PictureBox set_msg_pic(PictureBox p1, string inputString)
+        private void set_msg_pic(PictureBox p1, string inputString)
         {
-            byte[] imageBytes = Convert.FromBase64String(inputString);
+            byte[] imageBytes = Convert.FromBase64String(inputString.ToString());
             System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
 
             Image image = Image.FromStream(ms, true, true);
             Bitmap img2 = new Bitmap(image, 30, 30);
 
             p1.Image = img2;
-            return p1;
+
         }
 
 
@@ -163,17 +165,73 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
-                WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
-                String inputString = await user.get_picture(buyeremail);
                 count = msg.find_msg_is_exist(buyeremail);
-                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), inputString, Owneremail);
+                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), Owneremail);
 
                 set_onemsg(count);
                 textBox1.Text = "";
             }
         }
 
+        private void star1_Click(object sender, EventArgs e)
+        {
+            this.star1.BackgroundImage = ystar;
+            this.star2.BackgroundImage = star;
+            this.star3.BackgroundImage = star;
+            this.star4.BackgroundImage = star;
+            this.star5.BackgroundImage = star;
+            pro.score(Owneremail, ProductName, buyeremail, 1);
+        }
 
+        private void star2_Click(object sender, EventArgs e)
+        {
+            this.star1.BackgroundImage = ystar;
+            this.star2.BackgroundImage = ystar;
+            this.star3.BackgroundImage = star;
+            this.star4.BackgroundImage = star;
+            this.star5.BackgroundImage = star;
+        }
+
+        private void star3_Click(object sender, EventArgs e)
+        {
+            this.star1.BackgroundImage = ystar;
+            this.star2.BackgroundImage = ystar;
+            this.star3.BackgroundImage = ystar;
+            this.star4.BackgroundImage = star;
+            this.star5.BackgroundImage = star;
+        }
+
+        private void star4_Click(object sender, EventArgs e)
+        {
+            this.star1.BackgroundImage = ystar;
+            this.star2.BackgroundImage = ystar;
+            this.star3.BackgroundImage = ystar;
+            this.star4.BackgroundImage = ystar;
+            this.star5.BackgroundImage = star;
+        }
+
+        private void star5_Click(object sender, EventArgs e)
+        {
+            this.star1.BackgroundImage = ystar;
+            this.star2.BackgroundImage = ystar;
+            this.star3.BackgroundImage = ystar;
+            this.star4.BackgroundImage = ystar;
+            this.star5.BackgroundImage = ystar;
+        }
+        private void set_score_star() {
+            if (Owneremail != buyeremail)
+            {
+                this.star1.BackgroundImage = star;
+                this.star2.BackgroundImage = star;
+                this.star3.BackgroundImage = star;
+                this.star4.BackgroundImage = star;
+                this.star5.BackgroundImage = star;
+            }
+        }
+        private void setscore()
+        {
+
+
+        }
     }
 }
