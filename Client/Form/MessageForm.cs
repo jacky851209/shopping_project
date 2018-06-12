@@ -58,9 +58,11 @@ namespace WindowsFormsApplication1
                     sendemail.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
 
                     Label sendmsg = new Label();
-                    sendmsg.Width = 400;
+                    sendmsg.Width = 350;
                     sendmsg.Height = 30;
                     sendmsg.Text = send_msg[i].SendMessage;
+                    sendmsg.Location = new Point(100,92);
+                    sendmsg.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
 
                     fl.Controls.Add(picbox);
                     fl.Controls.Add(sendemail);
