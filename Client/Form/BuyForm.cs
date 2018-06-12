@@ -208,7 +208,15 @@ namespace WindowsFormsApplication1
         }
         private async void btns2_Click(object sender, EventArgs e)
         {
-           
+            WindowsFormsApplication1.Resources.ProductDB product = new WindowsFormsApplication1.Resources.ProductDB();
+            var Pcount = await product.get_allproduct();
+
+            int index = (int)(sender as Button).Tag;
+            if (Pcount[index].Count != 0)
+            {
+                MessageForm f8 = new MessageForm(mail,Pcount[index].ProductName);
+                f8.Show();
+            }
 
         }
         public void RefreshForm()
@@ -217,15 +225,8 @@ namespace WindowsFormsApplication1
             this.set_product(0, -1);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void search_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
     }
 }

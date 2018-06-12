@@ -224,3 +224,4 @@ D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.BuyProductForm
 D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.ModifyProductForm.resources
 D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.OrderForm.resources
 D:\Git\shopping_project\Client\obj\Debug\WindowsFormsApplication1.NotifyOwnerForm.resources
+D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.MessageForm.resources

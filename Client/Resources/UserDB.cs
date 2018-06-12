@@ -35,6 +35,8 @@ namespace WindowsFormsApplication1.Resources
             _mongoCollection = _mongoDatabase.GetCollection<User>("user");
 
             _mongoCollection1 = _mongoDatabase.GetCollection<Product>("product");
+
+           
         }
         public void InsertOne(String name, String email, String password)
         {
