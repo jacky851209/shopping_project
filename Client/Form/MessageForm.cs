@@ -15,21 +15,23 @@ namespace WindowsFormsApplication1
      
         String productname;
         String buyeremail;
+        int count;
+        
         public MessageForm(String email,String pname)
         {
             InitializeComponent();
             this.productname = pname;
             this.buyeremail = email;
             pnamelabel.Text = productname;
-            set_msg();
+            set_msg(0);
         }
 
-        private async void set_msg()
+        private async void set_msg(int number)
         {
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
-            int count = msg.find_msg_is_exist(productname);
+            count = msg.find_msg_is_exist(productname);
             List<Resources.Message> send_msg;
             if (count<0)
             {
@@ -37,7 +39,7 @@ namespace WindowsFormsApplication1
             else
             {
                 send_msg =await msg.get_msg(productname);
-                for(int i=0;i<count;i++)
+                for(int i=number;i<count;i++)
                 {
                     FlowLayoutPanel fl = new FlowLayoutPanel();
                     fl.Width = 487;
@@ -96,7 +98,8 @@ namespace WindowsFormsApplication1
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
                 String inputString = await user.get_picture(buyeremail);
                 msg.add_msg(productname, buyeremail, textBox1.Text.ToString(),inputString);
-                set_msg();
+                count =  msg.find_msg_is_exist(buyeremail);
+                set_msg(count-1);
                 textBox1.Text = "";
             }
         }
