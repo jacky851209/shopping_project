@@ -27,7 +27,8 @@ namespace WindowsFormsApplication1
         }
 
         private async void set_msg(int number)
-        {
+        { 
+            
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
@@ -48,11 +49,11 @@ namespace WindowsFormsApplication1
                     PictureBox picbox = new PictureBox();
                     picbox.Width = 30;
                     picbox.Height = 30;
-
+                    
                     set_msg_pic(picbox, send_msg[i].User_image);
                     picbox.Size = new System.Drawing.Size(30, 30);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
-
+                    
                     Label sendemail = new Label();
                     sendemail.Width = 50;
                     sendemail.Height = 30;
@@ -75,7 +76,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void set_msg_pic(PictureBox p1, string inputString)
+        private PictureBox set_msg_pic(PictureBox p1, string inputString)
         {
             byte[] imageBytes = Convert.FromBase64String(inputString);
             System.IO.MemoryStream ms = new System.IO.MemoryStream(imageBytes);
@@ -84,6 +85,7 @@ namespace WindowsFormsApplication1
             Bitmap img2 = new Bitmap(image, 30, 30);
 
             p1.Image = img2;
+            return p1;
         }
 
 
@@ -97,9 +99,9 @@ namespace WindowsFormsApplication1
                 WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
                 String inputString = await user.get_picture(buyeremail);
-                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(),inputString);
+                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), inputString);
                 count =  msg.find_msg_is_exist(buyeremail);
-                set_msg(count-1);
+                set_msg(count - 1);
                 textBox1.Text = "";
             }
         }

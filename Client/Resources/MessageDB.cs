@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Resources
             _BaseDB = BaseDB.getInstance();
         }
 
-        public void add_msg(String item, String email,String msg, String inputstream)
+        public void add_msg(String item, String email, String msg, String inputstream)
         {
             var coll = _BaseDB.GetInsertCollection<Message>("shopping", "message");
             coll.Insert(new BsonDocument { { "ProductName", item }, { "BuyerEmail", email }, { "SendMessage", msg }, { "User_image", inputstream } });
