@@ -12,35 +12,36 @@ namespace WindowsFormsApplication1
 {
     public partial class MessageForm : Form
     {
-     
+
         String productname;
         String buyeremail;
+        String Owneremail;
         int count;
-        
-        public MessageForm(String email,String pname)
+
+        public MessageForm(String email, String pmail, String omail)
         {
             InitializeComponent();
-            this.productname = pname;
+            this.productname = pmail;
             this.buyeremail = email;
+            this.Owneremail = omail;
             pnamelabel.Text = productname;
             set_msg(0);
         }
 
         private async void set_msg(int number)
-        { 
-            
+        {
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.AutoScroll = true;
             WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
             count = msg.find_msg_is_exist(productname);
             List<Resources.Message> send_msg;
-            if (count<0)
+            if (count < 0)
             {
             }
             else
             {
-                send_msg =await msg.get_msg(productname);
-                for(int i=number;i<count;i++)
+                send_msg = await msg.get_msg(productname);
+                for (int i = number; i < count; i++)
                 {
                     FlowLayoutPanel fl = new FlowLayoutPanel();
                     fl.Width = 487;
@@ -49,22 +50,31 @@ namespace WindowsFormsApplication1
                     PictureBox picbox = new PictureBox();
                     picbox.Width = 30;
                     picbox.Height = 30;
-                    
+
                     set_msg_pic(picbox, send_msg[i].User_image);
                     picbox.Size = new System.Drawing.Size(30, 30);
                     picbox.SizeMode = PictureBoxSizeMode.Zoom;
-                    
+
+
                     Label sendemail = new Label();
                     sendemail.Width = 50;
                     sendemail.Height = 30;
-                    sendemail.Text = send_msg[i].BuyerEmail;
                     sendemail.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+
+                    if (send_msg[i].BuyerEmail == send_msg[i].OwnerEmail)
+                    {
+                        sendemail.Text = "賣家";
+                    }
+                    else
+                    {
+                        sendemail.Text = send_msg[i].BuyerEmail;
+                    }
 
                     Label sendmsg = new Label();
                     sendmsg.Width = 350;
                     sendmsg.Height = 30;
                     sendmsg.Text = send_msg[i].SendMessage;
-                    sendmsg.Location = new Point(100,92);
+                    sendmsg.Location = new Point(100, 92);
                     sendmsg.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
 
                     fl.Controls.Add(picbox);
@@ -79,45 +89,57 @@ namespace WindowsFormsApplication1
         private async void set_onemsg(int number)
         {
 
-           
+
             WindowsFormsApplication1.Resources.MessageDB msg = new WindowsFormsApplication1.Resources.MessageDB();
             count = msg.find_msg_is_exist(productname);
             List<Resources.Message> send_msg;
 
             send_msg = await msg.get_msg(productname);
-           
-                    FlowLayoutPanel fl = new FlowLayoutPanel();
-                     fl.Width = 487;
-                    fl.Height = 30;
 
-                    PictureBox picbox = new PictureBox();
-                    picbox.Width = 30;
-                    picbox.Height = 30;
+            FlowLayoutPanel fl = new FlowLayoutPanel();
+            fl.Width = 487;
+            fl.Height = 100;
 
-                    set_msg_pic(picbox, send_msg[count-1].User_image);
-                    picbox.Size = new System.Drawing.Size(30, 30);
-                    picbox.SizeMode = PictureBoxSizeMode.Zoom;
+            PictureBox picbox = new PictureBox();
+            picbox.Width = 30;
+            picbox.Height = 30;
 
-                    Label sendemail = new Label();
-                    sendemail.Width = 50;
-                    sendemail.Height = 30;
-                    sendemail.Text = send_msg[count-1].BuyerEmail;
-                    sendemail.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+            set_msg_pic(picbox, send_msg[count - 1].User_image);
+            picbox.Size = new System.Drawing.Size(30, 30);
+            picbox.SizeMode = PictureBoxSizeMode.Zoom;
 
-                    Label sendmsg = new Label();
-                    sendmsg.Width = 350;
-                    sendmsg.Height = 30;
-                    sendmsg.Text = send_msg[count-1].SendMessage;
-                    sendmsg.Location = new Point(100, 92);
-                    sendmsg.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+            Label sendemail = new Label();
+            sendemail.Width = 50;
+            sendemail.Height = 30;
 
-                    fl.Controls.Add(picbox);
-                    fl.Controls.Add(sendemail);
-                    fl.Controls.Add(sendmsg);
+            sendemail.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
 
-                    flowLayoutPanel1.Controls.Add(fl);
-              
-           
+            if (send_msg[count - 1].BuyerEmail == send_msg[count - 1].OwnerEmail)
+            {
+                sendemail.Text = "賣家";
+            }
+            else
+            {
+                sendemail.Text = send_msg[count - 1].BuyerEmail;
+            }
+
+            Label sendmsg = new Label();
+            sendmsg.Width = 200;
+            sendmsg.Height = 20;
+            sendmsg.Text = send_msg[count - 1].SendMessage;
+            sendmsg.Location = new Point(100, 92);
+            sendmsg.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+
+
+
+
+            fl.Controls.Add(picbox);
+            fl.Controls.Add(sendemail);
+            fl.Controls.Add(sendmsg);
+
+            flowLayoutPanel1.Controls.Add(fl);
+
+
         }
 
 
@@ -136,7 +158,7 @@ namespace WindowsFormsApplication1
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.Length <= 0)
+            if (textBox1.Text.Length <= 0)
             {
             }
             else
@@ -145,13 +167,13 @@ namespace WindowsFormsApplication1
                 WindowsFormsApplication1.Resources.UserDB user = new WindowsFormsApplication1.Resources.UserDB();
                 String inputString = await user.get_picture(buyeremail);
                 count = msg.find_msg_is_exist(buyeremail);
-                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), inputString);
-               
+                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), inputString, Owneremail);
+
                 set_onemsg(count);
                 textBox1.Text = "";
             }
         }
 
-       
+
     }
 }

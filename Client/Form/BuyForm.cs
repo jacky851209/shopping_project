@@ -214,7 +214,7 @@ namespace WindowsFormsApplication1
             int index = (int)(sender as Button).Tag;
             if (Pcount[index].Count != 0)
             {
-                MessageForm f8 = new MessageForm(mail,Pcount[index].ProductName);
+                MessageForm f8 = new MessageForm(mail,Pcount[index].ProductName,Pcount[index].OwnerEmail);
                 f8.Show();
             }
 
