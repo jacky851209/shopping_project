@@ -18,10 +18,10 @@ namespace WindowsFormsApplication1.Resources
             _BaseDB = BaseDB.getInstance();
         }
 
-        public void add_msg(String item, String email, String msg, String oemail , int source)
+        public void add_msg(String item, String email, String msg, String oemail , int score)
         {
             var collection = _BaseDB.GetInsertCollection<Message>("shopping", "message");
-            collection.Insert(new BsonDocument { { "ProductName", item }, { "BuyerEmail", email }, { "SendMessage", msg }, { "OwnerEmail", oemail } ,{ "Source",source } });
+            collection.Insert(new BsonDocument { { "ProductName", item }, { "BuyerEmail", email }, { "SendMessage", msg }, { "OwnerEmail", oemail } ,{ "score", score } });
         }
 
         public int find_msg_is_exist(String item)

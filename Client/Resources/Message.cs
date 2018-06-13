@@ -16,6 +16,6 @@ namespace WindowsFormsApplication1.Resources
         public string BuyerEmail { get; set; }
         public string SendMessage { get; set; }
         public string OwnerEmail { get; set; }
-        public int Source { get; set; }
+        public int score { get; set; }
     }
 }
