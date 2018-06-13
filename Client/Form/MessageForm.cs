@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
         String buyeremail;
         String Owneremail;
         int count;
+        int source = 0;
 
         public MessageForm(String email, String pmail, String omail)
         {
@@ -31,6 +32,7 @@ namespace WindowsFormsApplication1
             pnamelabel.Text = productname;
             set_score_star();
             set_msg(0);
+            set_avgsource();
         }
 
         private async void set_msg(int number)
@@ -89,6 +91,27 @@ namespace WindowsFormsApplication1
                 }
             }
         }
+
+        public async void set_avgsource()
+        {
+            List<Resources.Message> send_msg;
+            send_msg = await msg.get_msg(productname);
+            count = msg.find_msg_is_exist(productname);
+            Double totalsource = 0;
+            Double avgsource =0;
+            for (int i = 0;i<count;i++)
+            {
+                if(send_msg[i].Source>0)
+                {
+                    totalsource++;
+                    avgsource += send_msg[i].Source;
+                }
+            }
+            avgsource = avgsource / totalsource;
+            Sourcelabel.Text = Math.Round(avgsource, 1).ToString();
+           
+        }
+
 
         private async void set_onemsg(int number)
         {
@@ -166,21 +189,23 @@ namespace WindowsFormsApplication1
             else
             {
                 count = msg.find_msg_is_exist(buyeremail);
-                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), Owneremail);
+                msg.add_msg(productname, buyeremail, textBox1.Text.ToString(), Owneremail,source);
 
                 set_onemsg(count);
                 textBox1.Text = "";
+                set_avgsource();
             }
         }
 
-        private void star1_Click(object sender, EventArgs e)
+        private  void star1_Click(object sender, EventArgs e)
         {
             this.star1.BackgroundImage = ystar;
             this.star2.BackgroundImage = star;
             this.star3.BackgroundImage = star;
             this.star4.BackgroundImage = star;
             this.star5.BackgroundImage = star;
-            pro.score(Owneremail, ProductName, buyeremail, 1);
+           // await pro.score(Owneremail, ProductName, buyeremail, 1);
+            source = 1;
         }
 
         private void star2_Click(object sender, EventArgs e)
@@ -190,6 +215,7 @@ namespace WindowsFormsApplication1
             this.star3.BackgroundImage = star;
             this.star4.BackgroundImage = star;
             this.star5.BackgroundImage = star;
+            source = 2;
         }
 
         private void star3_Click(object sender, EventArgs e)
@@ -199,6 +225,7 @@ namespace WindowsFormsApplication1
             this.star3.BackgroundImage = ystar;
             this.star4.BackgroundImage = star;
             this.star5.BackgroundImage = star;
+            source = 3;
         }
 
         private void star4_Click(object sender, EventArgs e)
@@ -208,6 +235,7 @@ namespace WindowsFormsApplication1
             this.star3.BackgroundImage = ystar;
             this.star4.BackgroundImage = ystar;
             this.star5.BackgroundImage = star;
+            source = 4;
         }
 
         private void star5_Click(object sender, EventArgs e)
@@ -217,6 +245,7 @@ namespace WindowsFormsApplication1
             this.star3.BackgroundImage = ystar;
             this.star4.BackgroundImage = ystar;
             this.star5.BackgroundImage = ystar;
+            source = 5;
         }
         private void set_score_star() {
             if (Owneremail != buyeremail)
@@ -230,7 +259,13 @@ namespace WindowsFormsApplication1
         }
         private void setscore()
         {
+            if(source<=0)
+            {
+            }
+            else
+            {
 
+            }
 
         }
     }

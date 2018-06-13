@@ -40,6 +40,7 @@
             this.star3 = new System.Windows.Forms.PictureBox();
             this.star2 = new System.Windows.Forms.PictureBox();
             this.average = new System.Windows.Forms.Label();
+            this.Sourcelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.star1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
@@ -52,10 +53,10 @@
             this.textBox1.BackColor = System.Drawing.Color.MistyRose;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(10, 500);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(13, 625);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 27);
+            this.textBox1.Size = new System.Drawing.Size(390, 31);
             this.textBox1.TabIndex = 0;
             // 
             // button1
@@ -64,10 +65,10 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(307, 500);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(409, 625);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 27);
+            this.button1.Size = new System.Drawing.Size(91, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = false;
@@ -77,10 +78,10 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.MistyRose;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 105);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 131);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(365, 380);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(486, 474);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // label1
@@ -88,10 +89,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 35);
+            this.label1.Size = new System.Drawing.Size(486, 43);
             this.label1.TabIndex = 3;
             this.label1.Text = "商品留言板";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,10 +100,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(11, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(15, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 21);
+            this.label2.Size = new System.Drawing.Size(107, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "商品名稱 : ";
             // 
@@ -111,55 +110,59 @@
             // 
             this.pnamelabel.AutoSize = true;
             this.pnamelabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.pnamelabel.Location = new System.Drawing.Point(11, 79);
-            this.pnamelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pnamelabel.Location = new System.Drawing.Point(15, 99);
             this.pnamelabel.Name = "pnamelabel";
-            this.pnamelabel.Size = new System.Drawing.Size(70, 21);
+            this.pnamelabel.Size = new System.Drawing.Size(90, 25);
             this.pnamelabel.TabIndex = 5;
             this.pnamelabel.Text = "product";
             // 
             // star1
             // 
             this.star1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.star1.Location = new System.Drawing.Point(230, 51);
+            this.star1.Location = new System.Drawing.Point(307, 64);
+            this.star1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.star1.Name = "star1";
-            this.star1.Size = new System.Drawing.Size(25, 25);
+            this.star1.Size = new System.Drawing.Size(33, 31);
             this.star1.TabIndex = 10;
             this.star1.TabStop = false;
             this.star1.Click += new System.EventHandler(this.star1_Click);
             // 
             // star5
             // 
-            this.star5.Location = new System.Drawing.Point(350, 51);
+            this.star5.Location = new System.Drawing.Point(467, 64);
+            this.star5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.star5.Name = "star5";
-            this.star5.Size = new System.Drawing.Size(25, 25);
+            this.star5.Size = new System.Drawing.Size(33, 31);
             this.star5.TabIndex = 9;
             this.star5.TabStop = false;
             this.star5.Click += new System.EventHandler(this.star5_Click);
             // 
             // star4
             // 
-            this.star4.Location = new System.Drawing.Point(320, 51);
+            this.star4.Location = new System.Drawing.Point(427, 64);
+            this.star4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.star4.Name = "star4";
-            this.star4.Size = new System.Drawing.Size(25, 25);
+            this.star4.Size = new System.Drawing.Size(33, 31);
             this.star4.TabIndex = 8;
             this.star4.TabStop = false;
             this.star4.Click += new System.EventHandler(this.star4_Click);
             // 
             // star3
             // 
-            this.star3.Location = new System.Drawing.Point(290, 51);
+            this.star3.Location = new System.Drawing.Point(387, 64);
+            this.star3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.star3.Name = "star3";
-            this.star3.Size = new System.Drawing.Size(25, 25);
+            this.star3.Size = new System.Drawing.Size(33, 31);
             this.star3.TabIndex = 7;
             this.star3.TabStop = false;
             this.star3.Click += new System.EventHandler(this.star3_Click);
             // 
             // star2
             // 
-            this.star2.Location = new System.Drawing.Point(260, 51);
+            this.star2.Location = new System.Drawing.Point(347, 64);
+            this.star2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.star2.Name = "star2";
-            this.star2.Size = new System.Drawing.Size(25, 25);
+            this.star2.Size = new System.Drawing.Size(33, 31);
             this.star2.TabIndex = 6;
             this.star2.TabStop = false;
             this.star2.Click += new System.EventHandler(this.star2_Click);
@@ -168,18 +171,30 @@
             // 
             this.average.AutoSize = true;
             this.average.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.average.Location = new System.Drawing.Point(286, 79);
+            this.average.Location = new System.Drawing.Point(365, 99);
+            this.average.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.average.Name = "average";
-            this.average.Size = new System.Drawing.Size(46, 21);
+            this.average.Size = new System.Drawing.Size(57, 25);
             this.average.TabIndex = 11;
             this.average.Text = "平均:";
             // 
+            // Sourcelabel
+            // 
+            this.Sourcelabel.AutoSize = true;
+            this.Sourcelabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Sourcelabel.Location = new System.Drawing.Point(418, 99);
+            this.Sourcelabel.Name = "Sourcelabel";
+            this.Sourcelabel.Size = new System.Drawing.Size(79, 25);
+            this.Sourcelabel.TabIndex = 12;
+            this.Sourcelabel.Text = "Source";
+            // 
             // MessageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(384, 541);
+            this.ClientSize = new System.Drawing.Size(512, 676);
+            this.Controls.Add(this.Sourcelabel);
             this.Controls.Add(this.average);
             this.Controls.Add(this.star1);
             this.Controls.Add(this.star5);
@@ -192,7 +207,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MessageForm";
             this.Text = "MessageForm";
             ((System.ComponentModel.ISupportInitialize)(this.star1)).EndInit();
@@ -219,5 +234,6 @@
         private System.Windows.Forms.PictureBox star5;
         private System.Windows.Forms.PictureBox star1;
         private System.Windows.Forms.Label average;
+        private System.Windows.Forms.Label Sourcelabel;
     }
 }
