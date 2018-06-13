@@ -103,12 +103,27 @@ namespace WindowsFormsApplication1
             {
                 if(send_msg[i].Source>0)
                 {
-                    totalsource++;
-                    avgsource += send_msg[i].Source;
+                    totalsource++;   
                 }
             }
-            avgsource = avgsource / totalsource;
-            Sourcelabel.Text = Math.Round(avgsource, 1).ToString();
+
+            if(totalsource<=0)
+            {
+                Sourcelabel.Text = "---";
+            }
+            else
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    if (send_msg[i].Source > 0)
+                    {
+                        avgsource += send_msg[i].Source;
+                    }
+                }
+                avgsource = avgsource / totalsource;
+                Sourcelabel.Text = Math.Round(avgsource, 1).ToString();
+            }
+           
            
         }
 
@@ -194,6 +209,7 @@ namespace WindowsFormsApplication1
                 set_onemsg(count);
                 textBox1.Text = "";
                 set_avgsource();
+                set_score_star();
             }
         }
 
@@ -255,18 +271,9 @@ namespace WindowsFormsApplication1
                 this.star3.BackgroundImage = star;
                 this.star4.BackgroundImage = star;
                 this.star5.BackgroundImage = star;
+                source = 0;
             }
         }
-        private void setscore()
-        {
-            if(source<=0)
-            {
-            }
-            else
-            {
-
-            }
-
-        }
+        
     }
 }

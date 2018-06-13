@@ -120,7 +120,7 @@
             // 
             this.star1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.star1.Location = new System.Drawing.Point(307, 64);
-            this.star1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star1.Margin = new System.Windows.Forms.Padding(4);
             this.star1.Name = "star1";
             this.star1.Size = new System.Drawing.Size(33, 31);
             this.star1.TabIndex = 10;
@@ -130,7 +130,7 @@
             // star5
             // 
             this.star5.Location = new System.Drawing.Point(467, 64);
-            this.star5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star5.Margin = new System.Windows.Forms.Padding(4);
             this.star5.Name = "star5";
             this.star5.Size = new System.Drawing.Size(33, 31);
             this.star5.TabIndex = 9;
@@ -140,7 +140,7 @@
             // star4
             // 
             this.star4.Location = new System.Drawing.Point(427, 64);
-            this.star4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star4.Margin = new System.Windows.Forms.Padding(4);
             this.star4.Name = "star4";
             this.star4.Size = new System.Drawing.Size(33, 31);
             this.star4.TabIndex = 8;
@@ -150,7 +150,7 @@
             // star3
             // 
             this.star3.Location = new System.Drawing.Point(387, 64);
-            this.star3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star3.Margin = new System.Windows.Forms.Padding(4);
             this.star3.Name = "star3";
             this.star3.Size = new System.Drawing.Size(33, 31);
             this.star3.TabIndex = 7;
@@ -160,7 +160,7 @@
             // star2
             // 
             this.star2.Location = new System.Drawing.Point(347, 64);
-            this.star2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star2.Margin = new System.Windows.Forms.Padding(4);
             this.star2.Name = "star2";
             this.star2.Size = new System.Drawing.Size(33, 31);
             this.star2.TabIndex = 6;
@@ -182,7 +182,7 @@
             // 
             this.Sourcelabel.AutoSize = true;
             this.Sourcelabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Sourcelabel.Location = new System.Drawing.Point(418, 99);
+            this.Sourcelabel.Location = new System.Drawing.Point(423, 99);
             this.Sourcelabel.Name = "Sourcelabel";
             this.Sourcelabel.Size = new System.Drawing.Size(79, 25);
             this.Sourcelabel.TabIndex = 12;
