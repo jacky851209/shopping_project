@@ -18,13 +18,5 @@ namespace WindowsFormsApplication1.Resources
         public int Price { get; set; }
         public int Count { get; set; }
         public string Product_image { get; set; }
-      //  public List<Score> Score { get; set; }
     }
-
-    /*public class Score
-    {
-        public string name { get; set; }
-        public int score { get; set; }
-    }*/
-
 }

@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1.Resources
             byte[] imageArray = System.IO.File.ReadAllBytes(image_path);
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
-            var coll = _BaseDB.GetInsertCollection<Buy>("shopping", "product");
+            var coll = _BaseDB.GetInsertCollection<Product>("shopping", "product");
             coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation } });
         }
 
@@ -152,19 +152,5 @@ namespace WindowsFormsApplication1.Resources
             }
 
         }
-
-        /*public async Task score(String ownermail, String pro_name, String buyermail, int scores)
-        {
-            var collection = _BaseDB.GetCollection<Product>("shopping", "product");
-            var filter =Builders<Product>.Filter.And(
-                 Builders<Product>.Filter.Eq(p => p.OwnerEmail, ownermail),
-                 Builders<Product>.Filter.Eq(p => p.ProductName, pro_name)
-            );
-
-            var DelMultiple = collection.Find(filter).First();
-            var name = DelMultiple.Score.First(s => s.name == buyermail);
-            name.score = scores;
-
-        }*/
     }
 }

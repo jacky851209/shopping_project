@@ -17,19 +17,17 @@ namespace WindowsFormsApplication1.Resources
         {
             _BaseDB = BaseDB.getInstance();
         }
-
-        public void add_msg(String item, String email, String msg, String oemail , int score)
+        public void set_message(String Product, String OwnerEmail, String BuyerEmail, String message)
         {
-            var collection = _BaseDB.GetInsertCollection<Message>("shopping", "message");
-            collection.Insert(new BsonDocument { { "ProductName", item }, { "BuyerEmail", email }, { "SendMessage", msg }, { "OwnerEmail", oemail } ,{ "score", score } });
+            var coll = _BaseDB.GetInsertCollection<Message>("shopping", "message");
+            coll.Insert(new BsonDocument { { "ProductName", Product }, { "BuyerEmail", BuyerEmail }, { "SendMessage", message }, { "OwnerEmail", OwnerEmail } });
         }
-
         public int find_msg_is_exist(String item)
         {
             var collection = _BaseDB.GetCollection<Message>("shopping", "message");
 
             var filter = Builders<Message>.Filter.Eq(x => x.ProductName, item);
-            var results = collection.Find(filter).Count();
+            var results =  collection.Find(filter).Count();
 
             return (int)results;
         }

@@ -200,7 +200,6 @@ C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.BuyProductForm.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.ModifyProductForm.resources
 C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.OrderForm.resources
-C:\Users\JACKY\Desktop\shopping_project\Client\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.LoginForm.resources
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.RegisterForm.resources
 D:\開放平台\shopping_project\Client\obj\Debug\WindowsFormsApplication1.SellForm.resources

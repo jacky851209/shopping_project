@@ -156,6 +156,8 @@
     <Compile Include="Resources\MessageDB.cs" />
     <Compile Include="Resources\Product.cs" />
     <Compile Include="Resources\ProductDB.cs" />
+    <Compile Include="Resources\Score.cs" />
+    <Compile Include="Resources\ScoreDB.cs" />
     <Compile Include="Resources\User.cs" />
     <Compile Include="Resources\UserDB.cs" />
     <Compile Include="SocketClient.cs" />
