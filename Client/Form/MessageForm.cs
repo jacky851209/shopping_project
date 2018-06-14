@@ -119,7 +119,9 @@ namespace WindowsFormsApplication1
                 }
                 TotalScore /= all_person_count;
                 Sourcelabel.Text = Math.Round(TotalScore, 1).ToString();
+                await pro.set_score(Owneremail, productname, TotalScore);
             }
+
         }
 
 

@@ -18,5 +18,6 @@ namespace WindowsFormsApplication1.Resources
         public int Price { get; set; }
         public int Count { get; set; }
         public string Product_image { get; set; }
+        public double Average_Score { get; set; }
     }
 }

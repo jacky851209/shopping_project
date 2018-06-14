@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.Resources
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
             var coll = _BaseDB.GetInsertCollection<Product>("shopping", "product");
-            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation } });
+            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation }, { "Average_Score ", 0} });
         }
 
         public bool find_item_is_exist(String item, String email)
@@ -145,12 +145,30 @@ namespace WindowsFormsApplication1.Resources
                 var DelMultiple = await collection.Find(filter).Sort(Builders<Product>.Sort.Ascending("Price")).ToListAsync();
                 return DelMultiple;
             }
-            else
+            else if (price_type == 1)
             {
                 var DelMultiple = await collection.Find(filter).Sort(Builders<Product>.Sort.Descending("Price")).ToListAsync();
                 return DelMultiple;
             }
+            else 
+            {
+                var DelMultiple = await collection.Find(filter).Sort(Builders<Product>.Sort.Descending("Average_Score")).ToListAsync();
+                return DelMultiple;
+            }
 
+        }
+        public async Task set_score(String email, String pro_name, double score)
+        {
+            var collection = _BaseDB.GetCollection<Product>("shopping", "product");
+
+            var filter = Builders<Product>.Filter.And(
+                        Builders<Product>.Filter.Eq(p => p.ProductName, pro_name),
+                        Builders<Product>.Filter.Eq(p => p.OwnerEmail, email)
+            );
+            var result = await collection.FindOneAndUpdateAsync(
+                                filter,
+                                Builders<Product>.Update.Set("Average_Score", score)
+                                );
         }
     }
 }

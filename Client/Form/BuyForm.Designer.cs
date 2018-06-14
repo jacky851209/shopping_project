@@ -39,7 +39,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.PaleGreen;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 66);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(460, 472);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -52,13 +52,14 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(117, 27);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.Text = " 選擇排列方式";
             // 
             // button1
             // 
             this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.images;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(437, 16);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 39);
             this.button1.TabIndex = 4;
@@ -69,12 +70,12 @@
             // 
             this.search.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.search.Location = new System.Drawing.Point(12, 21);
-            this.search.Margin = new System.Windows.Forms.Padding(2);
+            this.search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(297, 27);
             this.search.TabIndex = 3;
             // 
-            // Form4
+            // BuyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,8 +86,8 @@
             this.Controls.Add(this.search);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form4";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "BuyForm";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();

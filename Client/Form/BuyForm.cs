@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
             this.mail = email;
             this.comboBox1.Items.Add("價格: 低到高");
             this.comboBox1.Items.Add("價格: 高到低");
+            this.comboBox1.Items.Add("評價: 高到低");
             set_product(0, -1);
         }
 

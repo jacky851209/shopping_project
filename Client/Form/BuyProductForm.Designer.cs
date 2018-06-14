@@ -40,6 +40,9 @@
             this.buy_howmuch = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buy_howmuch)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +61,7 @@
             // 
             this.pinto.AutoSize = true;
             this.pinto.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.pinto.Location = new System.Drawing.Point(200, 315);
+            this.pinto.Location = new System.Drawing.Point(200, 310);
             this.pinto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pinto.Name = "pinto";
             this.pinto.Size = new System.Drawing.Size(64, 24);
@@ -69,7 +72,7 @@
             // 
             this.pcount.AutoSize = true;
             this.pcount.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.pcount.Location = new System.Drawing.Point(200, 385);
+            this.pcount.Location = new System.Drawing.Point(200, 380);
             this.pcount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pcount.Name = "pcount";
             this.pcount.Size = new System.Drawing.Size(64, 24);
@@ -80,7 +83,7 @@
             // 
             this.pprice.AutoSize = true;
             this.pprice.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.pprice.Location = new System.Drawing.Point(200, 350);
+            this.pprice.Location = new System.Drawing.Point(200, 345);
             this.pprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pprice.Name = "pprice";
             this.pprice.Size = new System.Drawing.Size(64, 24);
@@ -91,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(94, 315);
+            this.label1.Location = new System.Drawing.Point(94, 310);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 24);
@@ -102,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(94, 385);
+            this.label2.Location = new System.Drawing.Point(94, 380);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 24);
@@ -113,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(94, 350);
+            this.label3.Location = new System.Drawing.Point(94, 345);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 24);
@@ -150,7 +153,7 @@
             // buy_howmuch
             // 
             this.buy_howmuch.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buy_howmuch.Location = new System.Drawing.Point(204, 420);
+            this.buy_howmuch.Location = new System.Drawing.Point(204, 415);
             this.buy_howmuch.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -174,7 +177,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(94, 420);
+            this.label4.Location = new System.Drawing.Point(94, 415);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 24);
@@ -195,6 +198,39 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(-46, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(473, 29);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "______________________________________________";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(-43, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(473, 29);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "______________________________________________";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(-44, 223);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(473, 29);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "______________________________________________";
+            // 
             // BuyProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -213,6 +249,9 @@
             this.Controls.Add(this.pcount);
             this.Controls.Add(this.pinto);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BuyProductForm";
             this.Text = "Form8";
@@ -237,5 +276,8 @@
         private System.Windows.Forms.NumericUpDown buy_howmuch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
