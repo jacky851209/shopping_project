@@ -23,6 +23,7 @@
 \usepackage[english]{babel}
 \usepackage{CJKutf8}
 \usepackage{graphicx}
+\usepackage{float}
 
 
 \hypersetup{
@@ -163,60 +164,26 @@ including title, author, version number, date, and source or location.$>$
 \end{figure}
 
 
-\section{User Documentation}
-$<$List the user documentation components (such as user manuals, on-line help, 
-and tutorials) that will be delivered along with the software. Identify any 
-known user documentation delivery formats or standards.$>$
-\section{Assumptions and Dependencies}
-
-$<$List any assumed factors (as opposed to known facts) that could affect the 
-requirements stated in the SRS. These could include third-party or commercial 
-components that you plan to use, issues around the development or operating 
-environment, or constraints. The project could be affected if these assumptions 
-are incorrect, are not shared, or change. Also identify any dependencies the 
-project has on external factors, such as software components that you intend to 
-reuse from another project, unless they are already documented elsewhere (for 
-example, in the vision and scope document or the project plan).$>$
-
-
 \chapter{External Interface Requirements}
 
 \section{User Interfaces}
-$<$Describe the logical characteristics of each interface between the software 
-product and the users. This may include sample screen images, any GUI standards 
-or product family style guides that are to be followed, screen layout 
-constraints, standard buttons and functions (e.g., help) that will appear on 
-every screen, keyboard shortcuts, error message display standards, and so on.  
-Define the software components for which a user interface is needed. Details of 
-the user interface design should be documented in a separate user interface 
-specification.$>$
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.33\textwidth]{signin.jpg}
+	\caption{登入畫面。}
+	\centering
+	\includegraphics[width=0.33\textwidth]{search.jpg}
+	\caption{登入後的頁面，會呈現目前可以買賣的商品。}
+\end{figure}
 
-\section{Hardware Interfaces}
-$<$Describe the logical and physical characteristics of each interface between 
-the software product and the hardware components of the system. This may include 
-the supported device types, the nature of the data and control interactions 
-between the software and the hardware, and communication protocols to be 
-used.$>$
-
-\section{Software Interfaces}
-$<$Describe the connections between this product and other specific software 
-components (name and version), including databases, operating systems, tools, 
-libraries, and integrated commercial components. Identify the data items or 
-messages coming into the system and going out and describe the purpose of each.  
-Describe the services needed and the nature of communications. Refer to 
-documents that describe detailed application programming interface protocols.  
-Identify data that will be shared across software components. If the data 
-sharing mechanism must be implemented in a specific way (for example, use of a 
-global data area in a multitasking operating system), specify this as an 
-implementation constraint.$>$
-
-\section{Communications Interfaces}
-$<$Describe the requirements associated with any communications functions 
-required by this product, including e-mail, web browser, network server 
-communications protocols, electronic forms, and so on. Define any pertinent 
-message formatting. Identify any communication standards that will be used, such 
-as FTP or HTTP. Specify any communication security or encryption issues, data 
-transfer rates, and synchronization mechanisms.$>$
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.45\textwidth]{note.jpg}
+	\caption{賣家的畫面。}
+	\centering
+	\includegraphics[width=0.45\textwidth]{star.jpg}
+	\caption{商品留言和評分頁面。}
+\end{figure}
 
 
 \chapter{系統特色}
