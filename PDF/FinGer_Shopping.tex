@@ -135,7 +135,33 @@ including title, author, version number, date, and source or location.$>$
 \qquad 此專案主要由 C\# 中的 Window Form 來作開發環境，並且以 mongodb 做為資料庫，來儲存用戶的相關資料，成品說明則是由LaTex撰寫而成。
 
 \section{程式架構}
-哈哈哈
+\qquad 使用MongoDB做為資料庫，並統一用BaseDB作為存取資料庫的基礎，再依照各頁面不同的需求來新增不同的class，來在相對應的collection進行一個存取的動作。\\
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{UserDB.pdf}
+	\caption{UserDB用來處理新增、修改使用者登入到資料庫。}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{ProductDB.pdf}
+	\caption{ProductDB用來對商品新增、修改、刪除。}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{BuyDB.pdf}
+	\caption{BuyDB用來對儲存商品購買紀錄。}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{ScoreDB.pdf}
+	\caption{ScoreDB用來紀錄不同使用者對商品的評分。}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{MessageDB.pdf}
+	\caption{MessageDB用來紀錄不同商品使用者對其的留言。}
+\end{figure}
+
 
 \section{User Documentation}
 $<$List the user documentation components (such as user manuals, on-line help, 
