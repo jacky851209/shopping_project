@@ -24,7 +24,8 @@ namespace WindowsFormsApplication1.Resources
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
             var coll = _BaseDB.GetInsertCollection<Product>("shopping", "product");
-            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation }, { "Average_Score ", 0} });
+            double aver = 0.0;
+            coll.Insert(new BsonDocument { { "ProductName", item }, { "Infomation", info }, { "OwnerEmail", email }, { "Price", price }, { "Count", count }, { "Product_image", base64ImageRepresentation }, { "Average_Score", aver } });
         }
 
         public bool find_item_is_exist(String item, String email)

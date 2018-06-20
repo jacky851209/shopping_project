@@ -160,7 +160,6 @@
     <Compile Include="Resources\ScoreDB.cs" />
     <Compile Include="Resources\User.cs" />
     <Compile Include="Resources\UserDB.cs" />
-    <Compile Include="SocketClient.cs" />
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
