@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Resources
         private BaseDB()
         {
             // MongoDB 連線字串
-            string connectionString = "mongodb://localhost:27017";
+            string connectionString = "mongodb://140.138.145.58:27017";
             // 產生 MongoClient 物件
             _mongoClient = new MongoClient(connectionString);
             // 取得 MongoServer 物件
